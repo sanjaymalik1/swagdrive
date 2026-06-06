@@ -1,7 +1,14 @@
-import { InquiryStatus } from "../generated/prisma/client";
+export const INQUIRY_STATUSES = [
+  "NEW",
+  "CONTACTED",
+  "QUOTED",
+  "CONVERTED",
+  "CLOSED",
+] as const;
+
+export type InquiryStatus = (typeof INQUIRY_STATUSES)[number];
 
 // ─── Inquiry Status ───────────────────────────────────────────────────────────
-
 export const INQUIRY_STATUS_LABELS: Record<InquiryStatus, string> = {
   NEW:       "New",
   CONTACTED: "Contacted",
