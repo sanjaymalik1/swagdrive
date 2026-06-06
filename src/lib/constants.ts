@@ -71,10 +71,10 @@ export const USE_CASES: { title: string; description: string }[] = [
 // ─── Site Config ──────────────────────────────────────────────────────────────
 
 export const SITE_CONFIG = {
-  name:            "Your Company Name",
+  name:            "SwagDrive",
   tagline:         "Premium Corporate Gifting for Indian Businesses",
   whatsappNumber:  "919999999999",
   email:           "hello@company.com",
   phone:           "+91 99999 99999",
-  city:            "Mumbai",
+  city:            "Delhi",
 } as const;

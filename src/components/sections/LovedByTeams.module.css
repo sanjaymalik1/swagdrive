@@ -1,0 +1,114 @@
+@keyframes loved-by-teams-scroll {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.marqueeViewport {
+  position: relative;
+  overflow: hidden;
+  margin-top: 2rem;
+}
+
+@media (min-width: 640px) {
+  .marqueeViewport {
+    margin-top: 2.5rem;
+  }
+}
+
+.marqueeTrack {
+  display: flex;
+  width: max-content;
+  animation: loved-by-teams-scroll 28s linear infinite;
+  will-change: transform;
+}
+
+.marqueeTrack:hover {
+  animation-play-state: paused;
+}
+
+.logoRow {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 4rem;
+  padding-inline: 2rem;
+}
+
+@media (min-width: 640px) {
+  .logoRow {
+    gap: 5rem;
+    padding-inline: 2.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .logoRow {
+    gap: 6rem;
+    padding-inline: 3rem;
+  }
+}
+
+.logoItem {
+  display: flex;
+  height: 3rem;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 640px) {
+  .logoItem {
+    height: 3.5rem;
+  }
+}
+
+.logoImage {
+  height: 2rem;
+  width: auto;
+  max-width: none;
+  object-fit: contain;
+  opacity: 0.9;
+  filter: brightness(0);
+}
+
+@media (min-width: 640px) {
+  .logoImage {
+    height: 2.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .logoImage {
+    height: 2.75rem;
+  }
+}
+
+.fadeLeft,
+.fadeRight {
+  pointer-events: none;
+  position: absolute;
+  inset-block: 0;
+  z-index: 10;
+  width: 4rem;
+}
+
+@media (min-width: 640px) {
+  .fadeLeft,
+  .fadeRight {
+    width: 6rem;
+  }
+}
+
+.fadeLeft {
+  left: 0;
+  background: linear-gradient(to right, #f7f7f7, transparent);
+}
+
+.fadeRight {
+  right: 0;
+  background: linear-gradient(to left, #f7f7f7, transparent);
+}
