@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { Fragment } from "react";
 import { cn } from "@/lib/utils";
 import type { NavLink } from "./Header";
 
@@ -13,22 +14,34 @@ export function DesktopNav({ links }: DesktopNavProps) {
   const pathname = usePathname();
 
   return (
-    <nav className="hidden items-center gap-1 md:flex">
-      {links.map((link) => {
-        const active = pathname === link.href;
+    <nav className="flex items-center">
+      {links.map((link, index) => {
+        const active =
+          pathname === link.href ||
+          (link.href !== "/" && pathname.startsWith(link.href));
+
         return (
-          <Link
-            key={link.href}
-            href={link.href}
-            className={cn(
-              "rounded-md px-3 py-1.5 text-sm font-medium transition-colors",
-              active
-                ? "bg-primary/10 text-primary"
-                : "text-foreground/65 hover:bg-muted hover:text-foreground"
+          <Fragment key={link.href}>
+            {index > 0 && (
+              <span
+                className="mx-4 text-base text-gray-400 select-none"
+                aria-hidden
+              >
+                ·
+              </span>
             )}
-          >
-            {link.label}
-          </Link>
+            <Link
+              href={link.href}
+              className={cn(
+                "text-sm font-semibold uppercase tracking-[0.12em] transition-colors sm:text-base",
+                active
+                  ? "text-[#F28C28]"
+                  : "text-[#1A1A1A] hover:text-[#F28C28]"
+              )}
+            >
+              {link.label}
+            </Link>
+          </Fragment>
         );
       })}
     </nav>

@@ -32,6 +32,8 @@ export type HeroSlide = {
   /** Right-side product / graphic image */
   image: string;
   imageAlt: string;
+  /** "side" = image in right column; "background" = full-bleed cover behind slide */
+  imageFit?: "side" | "background";
 };
 
 export const HERO_SLIDES: HeroSlide[] = [
@@ -46,8 +48,9 @@ export const HERO_SLIDES: HeroSlide[] = [
       { label: "SEE HOW IT WORKS", href: "/use-cases", variant: "outline-dark" },
       { label: "SHOP ALL", href: "/products", variant: "filled-dark" },
     ],
-    image: "",
+    image: "/hero/slide-1.png",
     imageAlt: "Corporate merchandise collection",
+    imageFit: "background",
   },
   {
     id: 2,
@@ -65,8 +68,9 @@ export const HERO_SLIDES: HeroSlide[] = [
       { label: "SEE HOW IT WORKS", href: "/use-cases", variant: "outline-light" },
       { label: "EXPLORE HAMPERS", href: "/products", variant: "filled-light" },
     ],
-    image: "",
+    image: "/hero/slide-2.webp",
     imageAlt: "Premium gift hamper",
+    imageFit: "background",
   },
   {
     id: 3,
@@ -84,8 +88,9 @@ export const HERO_SLIDES: HeroSlide[] = [
       { label: "SEE HOW IT WORKS", href: "/use-cases", variant: "outline-light" },
       { label: "EXPLORE CATALOGUE", href: "/products", variant: "filled-light" },
     ],
-    image: "",
+    image: "/hero/slide-3.png",
     imageAlt: "Corporate product catalogue collage",
+    imageFit: "background",
   },
   {
     id: 4,
@@ -103,8 +108,9 @@ export const HERO_SLIDES: HeroSlide[] = [
       { label: "SEE HOW IT WORKS", href: "/use-cases", variant: "outline-light" },
       { label: "EXPLORE BRANDS", href: "/products", variant: "filled-light" },
     ],
-    image: "",
+    image: "/hero/slide-4.webp",
     imageAlt: "Trusted brand partner logos",
+    imageFit: "background",
   },
   {
     id: 5,
@@ -122,8 +128,9 @@ export const HERO_SLIDES: HeroSlide[] = [
       { label: "SEE HOW IT WORKS", href: "/use-cases", variant: "outline-dark" },
       { label: "EXPLORE PRODUCTS", href: "/products", variant: "filled-dark" },
     ],
-    image: "",
+    image: "/hero/slide-5.webp",
     imageAlt: "Enterprise gifting platform on tablet",
+    imageFit: "background",
   },
 ];
 
@@ -138,6 +145,7 @@ const BUTTON_STYLES: Record<ButtonVariant, string> = {
   "filled-dark": "border-[1.5px] border-black bg-black text-white hover:bg-black/90",
 };
 
+/* Grid overlay — disabled for now
 function GridOverlay({ theme }: { theme: "light" | "dark" }) {
   const lineColor =
     theme === "light" ? "rgba(255,255,255,0.15)" : "rgba(0,0,0,0.06)";
@@ -156,6 +164,7 @@ function GridOverlay({ theme }: { theme: "light" | "dark" }) {
     />
   );
 }
+*/
 
 function HeroHeadline({
   parts,
@@ -218,20 +227,18 @@ function SlideContent({ slide }: { slide: HeroSlide }) {
       className="relative flex h-full min-h-[460px] w-full flex-col md:min-h-[480px] md:flex-row"
       style={{ backgroundColor: slide.backgroundColor }}
     >
-      {slide.backgroundImage && (
-        <Image
-          src={slide.backgroundImage}
-          alt=""
-          fill
-          priority
-          className="object-cover"
-          sizes="100vw"
-        />
-      )}
+      <Image
+        src={slide.image}
+        alt=""
+        fill
+        priority={slide.id <= 2}
+        className="object-cover object-center"
+        sizes="100vw"
+      />
 
-      <GridOverlay theme={slide.gridTheme} />
+      {/* <GridOverlay theme={slide.gridTheme} /> */}
 
-      <div className="relative z-[2] flex w-full flex-col justify-center px-6 py-10 sm:px-10 md:w-[45%] md:py-0 md:pl-16 md:pr-8 lg:pl-20">
+      <div className="relative z-[2] flex w-full flex-col justify-center px-6 py-10 sm:px-10 md:w-[50%] md:py-0 md:pl-16 md:pr-8 lg:w-[45%] lg:pl-20">
         <HeroHeadline parts={slide.headline} textTheme={slide.textTheme} />
 
         <p
@@ -248,19 +255,6 @@ function SlideContent({ slide }: { slide: HeroSlide }) {
           {slide.buttons.map((btn) => (
             <HeroButton key={btn.label} {...btn} />
           ))}
-        </div>
-      </div>
-
-      <div className="relative z-[2] flex w-full flex-1 items-center justify-center px-6 pb-12 md:w-[55%] md:px-8 md:pb-0 md:pt-0">
-        <div className="relative h-[220px] w-full sm:h-[280px] md:h-[380px] lg:h-[420px]">
-          <Image
-            src={slide.image}
-            alt={slide.imageAlt}
-            fill
-            priority={slide.id === 1}
-            className="object-contain object-center"
-            sizes="(max-width: 768px) 100vw, 55vw"
-          />
         </div>
       </div>
     </div>
