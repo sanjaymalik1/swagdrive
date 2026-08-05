@@ -11,7 +11,13 @@ export function Logo({ className }: LogoProps) {
     <Link
       href="/"
       aria-label="Swag Drive home"
-      className={cn("inline-flex shrink-0 items-center", className)}
+      className={cn(
+        "inline-flex shrink-0 items-center rounded-md outline-none",
+        "transition-opacity duration-[250ms] ease-[cubic-bezier(0.22,1,0.36,1)]",
+        "hover:opacity-75 focus-visible:ring-2 focus-visible:ring-brand-navy/30 focus-visible:ring-offset-2",
+        "active:opacity-60",
+        className
+      )}
     >
       <Image
         src="/logo.png"
@@ -19,7 +25,7 @@ export function Logo({ className }: LogoProps) {
         width={360}
         height={80}
         priority
-        className="h-12 w-auto object-contain sm:h-14 lg:h-[3.75rem]"
+        className="h-[3.25rem] w-auto max-w-[min(100%,11rem)] object-contain object-left sm:h-14 sm:max-w-none lg:h-[4.25rem]"
       />
     </Link>
   );

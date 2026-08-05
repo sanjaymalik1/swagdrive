@@ -11,6 +11,7 @@ import {
   SheetHeader,
   SheetTitle,
 } from "@/components/ui/sheet";
+import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { Logo } from "./Logo";
 import type { NavLink } from "./nav";
@@ -30,12 +31,20 @@ export function MobileNav({ links, contactHref }: MobileNavProps) {
         type="button"
         onClick={() => setOpen(true)}
         aria-label="Open navigation menu"
-        className="inline-flex size-10 items-center justify-center text-brand-navy-deep transition-colors hover:bg-neutral-100 lg:hidden"
+        aria-expanded={open}
+        aria-controls="mobile-navigation"
+        className={cn(
+          "inline-flex size-11 min-h-11 min-w-11 items-center justify-center rounded-xl text-brand-navy-deep outline-none lg:hidden",
+          "transition-colors duration-[250ms] ease-[cubic-bezier(0.22,1,0.36,1)]",
+          "hover:bg-neutral-100 active:bg-neutral-200",
+          "focus-visible:ring-2 focus-visible:ring-brand-navy/30 focus-visible:ring-offset-2"
+        )}
       >
-        <Menu className="size-5" strokeWidth={1.75} />
+        <Menu className="size-5" strokeWidth={1.75} aria-hidden />
       </button>
 
       <SheetContent
+        id="mobile-navigation"
         side="right"
         className="flex w-full flex-col gap-0 border-brand-navy/10 bg-white p-0 sm:max-w-sm"
       >
@@ -55,11 +64,14 @@ export function MobileNav({ links, contactHref }: MobileNavProps) {
               <SheetClose asChild key={link.href}>
                 <Link
                   href={link.href}
+                  aria-current={active ? "page" : undefined}
                   className={cn(
-                    "rounded-md px-3 py-3 text-base font-medium transition-colors",
+                    "min-h-12 rounded-xl px-3 py-3.5 text-base font-semibold tracking-[-0.015em] outline-none",
+                    "transition-colors duration-[250ms] ease-[cubic-bezier(0.22,1,0.36,1)]",
+                    "focus-visible:ring-2 focus-visible:ring-brand-navy/30 focus-visible:ring-inset",
                     active
                       ? "bg-brand-navy text-white"
-                      : "text-brand-navy-deep hover:bg-brand-gold-soft/40"
+                      : "text-brand-navy-deep hover:bg-neutral-100 active:bg-neutral-200"
                   )}
                 >
                   {link.label}
@@ -71,12 +83,9 @@ export function MobileNav({ links, contactHref }: MobileNavProps) {
 
         <div className="border-t border-neutral-100 p-4">
           <SheetClose asChild>
-            <Link
-              href={contactHref}
-              className="flex h-11 w-full items-center justify-center rounded-md bg-brand-gold text-sm font-semibold text-brand-navy-deep transition-colors hover:bg-brand-gold-soft"
-            >
-              Contact
-            </Link>
+            <Button variant="brand" size="cta" asChild className="w-full">
+              <Link href={contactHref}>Contact</Link>
+            </Button>
           </SheetClose>
         </div>
       </SheetContent>
