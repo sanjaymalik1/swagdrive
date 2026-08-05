@@ -1,27 +1,13 @@
 import type { Metadata } from "next";
-import { DM_Sans, Inter, Playfair_Display } from "next/font/google";
+import { Inter } from "next/font/google";
 import { Toaster } from "sonner";
+import { SiteHeader } from "@/components/layout/SiteHeader";
 import { SITE_CONFIG } from "@/lib/constants";
 import "./globals.css";
 
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
-  display: "swap",
-});
-
-const dmSans = DM_Sans({
-  subsets: ["latin"],
-  variable: "--font-hero-sans",
-  weight: ["400", "600", "700"],
-  display: "swap",
-});
-
-const playfair = Playfair_Display({
-  subsets: ["latin"],
-  variable: "--font-hero-serif",
-  style: ["italic", "normal"],
-  weight: ["400", "700"],
   display: "swap",
 });
 
@@ -53,12 +39,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${inter.variable} ${dmSans.variable} ${playfair.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col">
-        {children}
+    <html lang="en" className={`${inter.variable} h-full antialiased`}>
+      <body className="flex min-h-full flex-col font-sans">
+        <SiteHeader />
+        <main className="flex-1">{children}</main>
         <Toaster richColors position="top-right" />
       </body>
     </html>

@@ -13,7 +13,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/products",
     "/categories",
     "/use-cases",
-    "/hampers",
   ];
 
   return routes.map((route) => ({

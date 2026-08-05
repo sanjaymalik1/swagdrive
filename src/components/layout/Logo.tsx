@@ -4,19 +4,22 @@ import { cn } from "@/lib/utils";
 
 interface LogoProps {
   className?: string;
-  imageClassName?: string;
 }
 
-export function Logo({ className, imageClassName }: LogoProps) {
+export function Logo({ className }: LogoProps) {
   return (
-    <Link href="/" className={cn("inline-flex shrink-0 items-center", className)}>
+    <Link
+      href="/"
+      aria-label="Swag Drive home"
+      className={cn("inline-flex shrink-0 items-center", className)}
+    >
       <Image
-        src="/logo.jpeg"
-        alt="SwagDrive"
-        width={200}
+        src="/logo.png"
+        alt="Swag Drive"
+        width={360}
         height={80}
         priority
-        className={cn("h-14 w-auto object-contain sm:h-16", imageClassName)}
+        className="h-12 w-auto object-contain sm:h-14 lg:h-[3.75rem]"
       />
     </Link>
   );

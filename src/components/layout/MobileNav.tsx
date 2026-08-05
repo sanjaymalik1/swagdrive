@@ -3,44 +3,49 @@
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, Search, FileText } from "lucide-react";
+import { Menu } from "lucide-react";
 import {
   Sheet,
+  SheetClose,
   SheetContent,
   SheetHeader,
   SheetTitle,
-  SheetClose,
 } from "@/components/ui/sheet";
-import { Logo } from "./Logo";
 import { cn } from "@/lib/utils";
-import type { NavLink } from "./Header";
+import { Logo } from "./Logo";
+import type { NavLink } from "./nav";
 
 interface MobileNavProps {
   links: NavLink[];
+  contactHref: string;
 }
 
-export function MobileNav({ links }: MobileNavProps) {
+export function MobileNav({ links, contactHref }: MobileNavProps) {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
 
   return (
     <Sheet open={open} onOpenChange={setOpen}>
       <button
+        type="button"
         onClick={() => setOpen(true)}
         aria-label="Open navigation menu"
-        className="flex items-center justify-center rounded-full border border-gray-300 p-2.5 text-[#1A1A1A] transition-colors hover:bg-gray-50 lg:hidden"
+        className="inline-flex size-10 items-center justify-center text-brand-navy-deep transition-colors hover:bg-neutral-100 lg:hidden"
       >
-        <Menu className="size-5" />
+        <Menu className="size-5" strokeWidth={1.75} />
       </button>
 
-      <SheetContent side="right" className="w-72 px-0 pt-0">
-        <SheetHeader className="border-b px-6 py-4">
+      <SheetContent
+        side="right"
+        className="flex w-full flex-col gap-0 border-brand-navy/10 bg-white p-0 sm:max-w-sm"
+      >
+        <SheetHeader className="border-b border-neutral-100 px-6 py-5">
           <SheetTitle className="text-left">
-            <Logo imageClassName="h-12" />
+            <Logo />
           </SheetTitle>
         </SheetHeader>
 
-        <nav className="flex flex-col gap-1 px-4 py-4">
+        <nav aria-label="Mobile" className="flex flex-1 flex-col gap-1 px-3 py-4">
           {links.map((link) => {
             const active =
               pathname === link.href ||
@@ -51,10 +56,10 @@ export function MobileNav({ links }: MobileNavProps) {
                 <Link
                   href={link.href}
                   className={cn(
-                    "px-3 py-2.5 text-sm font-semibold uppercase tracking-[0.12em] transition-colors",
+                    "rounded-md px-3 py-3 text-base font-medium transition-colors",
                     active
-                      ? "text-[#F28C28]"
-                      : "text-[#1A1A1A] hover:text-[#F28C28]"
+                      ? "bg-brand-navy text-white"
+                      : "text-brand-navy-deep hover:bg-brand-gold-soft/40"
                   )}
                 >
                   {link.label}
@@ -64,23 +69,13 @@ export function MobileNav({ links }: MobileNavProps) {
           })}
         </nav>
 
-        <div className="mt-auto flex items-center gap-3 border-t px-4 py-4">
+        <div className="border-t border-neutral-100 p-4">
           <SheetClose asChild>
             <Link
-              href="/products"
-              aria-label="Search products"
-              className="flex size-10 items-center justify-center rounded-full border border-gray-300 text-[#1A1A1A]"
+              href={contactHref}
+              className="flex h-11 w-full items-center justify-center rounded-md bg-brand-gold text-sm font-semibold text-brand-navy-deep transition-colors hover:bg-brand-gold-soft"
             >
-              <Search className="size-4" />
-            </Link>
-          </SheetClose>
-          <SheetClose asChild>
-            <Link
-              href="/get-quote"
-              className="flex flex-1 items-center justify-center gap-2 rounded-full bg-[#F28C28] px-4 py-2.5 text-xs font-bold uppercase tracking-wide text-white"
-            >
-              <FileText className="size-4" />
-              Quote
+              Contact
             </Link>
           </SheetClose>
         </div>

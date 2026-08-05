@@ -2,9 +2,8 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Fragment } from "react";
 import { cn } from "@/lib/utils";
-import type { NavLink } from "./Header";
+import type { NavLink } from "./nav";
 
 interface DesktopNavProps {
   links: NavLink[];
@@ -14,34 +13,32 @@ export function DesktopNav({ links }: DesktopNavProps) {
   const pathname = usePathname();
 
   return (
-    <nav className="flex items-center">
-      {links.map((link, index) => {
+    <nav aria-label="Primary" className="flex items-center gap-8">
+      {links.map((link) => {
         const active =
           pathname === link.href ||
           (link.href !== "/" && pathname.startsWith(link.href));
 
         return (
-          <Fragment key={link.href}>
-            {index > 0 && (
-              <span
-                className="mx-4 text-base text-gray-400 select-none"
-                aria-hidden
-              >
-                ·
-              </span>
+          <Link
+            key={link.href}
+            href={link.href}
+            className={cn(
+              "relative text-base font-semibold tracking-[-0.01em] transition-colors lg:text-[1.0625rem]",
+              active
+                ? "text-brand-navy-deep"
+                : "text-brand-navy/75 hover:text-brand-navy-deep"
             )}
-            <Link
-              href={link.href}
+          >
+            {link.label}
+            <span
+              aria-hidden
               className={cn(
-                "text-sm font-semibold uppercase tracking-[0.12em] transition-colors sm:text-base",
-                active
-                  ? "text-[#F28C28]"
-                  : "text-[#1A1A1A] hover:text-[#F28C28]"
+                "absolute -bottom-1 left-0 h-0.5 w-full origin-left bg-brand-gold transition-transform duration-200",
+                active ? "scale-x-100" : "scale-x-0"
               )}
-            >
-              {link.label}
-            </Link>
-          </Fragment>
+            />
+          </Link>
         );
       })}
     </nav>
