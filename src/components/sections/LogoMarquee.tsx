@@ -1,4 +1,10 @@
-const LOGOS = [
+type Logo = {
+  src: string;
+  alt: string;
+  size?: "large" | "small";
+};
+
+const LOGOS: Logo[] = [
   { src: "/logos/rapid7.svg", alt: "Rapid7" },
   { src: "/logos/clearwave.svg", alt: "Clearwave" },
   { src: "/logos/cognism.svg", alt: "Cognism" },
@@ -9,7 +15,7 @@ const LOGOS = [
   { src: "/logos/sentinelone.svg", alt: "SentinelOne" },
   { src: "/logos/sproutsocial.avif", alt: "Sprout Social" },
   { src: "/logos/blackline.svg", alt: "BlackLine" },
-] as const;
+];
 
 function LogoTrack() {
   return (
