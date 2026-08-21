@@ -216,7 +216,7 @@ export default function Header() {
     };
   }, [mobileOpen]);
 
-  const solid = scrolled || mobileOpen || platformOpen;
+  const solid = scrolled || mobileOpen;
 
   return (
     <header
