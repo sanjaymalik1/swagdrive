@@ -148,9 +148,6 @@ function DesktopNavItem({
           role="menu"
           className="overflow-hidden rounded-xl border border-[#E4E5E7] bg-white p-2 shadow-[0_16px_40px_rgba(34,30,38,0.12)]"
         >
-          <p className="px-3 pt-2 pb-1 font-[family-name:var(--font-overpass)] text-[10px] leading-3 font-bold tracking-[1px] text-[#4F5052] uppercase">
-            Platform
-          </p>
           <div className="flex flex-col">
             {link.children!.map((item) => (
               <PlatformDropdownItem
