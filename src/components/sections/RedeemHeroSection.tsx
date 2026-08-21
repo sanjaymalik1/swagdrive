@@ -15,7 +15,7 @@ export default function RedeemHeroSection() {
       <div className="px-5 pt-16 pb-10 min-[480px]:px-10 min-[768px]:pt-16 min-[768px]:pb-12 min-[992px]:pt-16 min-[992px]:pb-16 min-[992px]:pl-12 min-[992px]:pr-0">
         <div className="mx-auto grid w-full max-w-[90rem] grid-cols-1 items-center gap-10 min-[992px]:grid-cols-2 min-[992px]:items-start min-[992px]:gap-12">
           <div className="w-full max-w-[40rem] min-[992px]:pt-32">
-            <h1 className="m-0 text-[2.125rem] leading-[1.1] font-semibold tracking-[-0.05rem] text-[#221e26] min-[768px]:text-[2.875rem] min-[768px]:tracking-[-0.1rem] min-[992px]:text-[3.5rem] min-[992px]:tracking-[-0.13rem]">
+            <h1 className="m-0 text-[2.25rem] leading-[1.1] font-normal tracking-[-0.06rem] text-[#221e26] min-[768px]:text-[3rem] min-[768px]:tracking-[-0.12rem] min-[992px]:text-[3.875rem] min-[992px]:tracking-[-0.155rem]">
               Redeem Pages For
               <br />
               <span className="whitespace-nowrap">Easy Swag Distribution</span>
