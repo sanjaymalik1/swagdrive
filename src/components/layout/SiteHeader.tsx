@@ -7,7 +7,7 @@ import Header from "./Header";
 export function SiteHeader() {
   const pathname = usePathname();
 
-  if (pathname.startsWith("/admin")) {
+  if (pathname.startsWith("/admin") || pathname === "/login") {
     return null;
   }
 

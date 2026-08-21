@@ -7,7 +7,7 @@ import Footer from "./Footer";
 export function SiteFooter() {
   const pathname = usePathname();
 
-  if (pathname.startsWith("/admin")) {
+  if (pathname.startsWith("/admin") || pathname === "/login") {
     return null;
   }
 
