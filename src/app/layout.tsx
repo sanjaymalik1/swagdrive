@@ -35,16 +35,47 @@ export const metadata: Metadata = {
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_SITE_URL ?? "https://swagdrive.in"
   ),
+  icons: {
+    icon: [
+      // Default / crawlers (WhatsApp etc.) — white bg + black handle
+      { url: "/share-icon.png", type: "image/png", sizes: "512x512" },
+      {
+        url: "/favicon-light-32.png",
+        media: "(prefers-color-scheme: light)",
+        type: "image/png",
+        sizes: "32x32",
+      },
+      {
+        url: "/favicon-dark-32.png",
+        media: "(prefers-color-scheme: dark)",
+        type: "image/png",
+        sizes: "32x32",
+      },
+      { url: "/favicon-bag.png", type: "image/png" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+  },
   openGraph: {
     type: "website",
     siteName: SITE_CONFIG.name,
     title: SITE_CONFIG.name,
     description: SITE_CONFIG.tagline,
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: SITE_CONFIG.name,
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: SITE_CONFIG.name,
     description: SITE_CONFIG.tagline,
+    images: ["/og-image.png"],
   },
 };
 
