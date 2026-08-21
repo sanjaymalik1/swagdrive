@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
 import CrmHeroSection from "@/components/sections/CrmHeroSection";
 import CrmImpactSection from "@/components/sections/CrmImpactSection";
-import CrmPipelineHeading from "@/components/sections/CrmPipelineHeading";
+import CrmAutomationHero from "@/components/sections/CrmAutomationHero";
+import CrmUseCasesSection from "@/components/sections/CrmUseCasesSection";
+import CrmBenefitsSection from "@/components/sections/CrmBenefitsSection";
+import CrmStreamlineSection from "@/components/sections/CrmStreamlineSection";
 
 export const metadata: Metadata = {
   title: "CRM Dashboard",
@@ -14,7 +17,10 @@ export default function CrmDashboardPage() {
     <>
       <CrmHeroSection />
       <CrmImpactSection />
-      <CrmPipelineHeading />
+      <CrmAutomationHero />
+      <CrmUseCasesSection />
+      <CrmBenefitsSection />
+      <CrmStreamlineSection />
     </>
   );
 }
