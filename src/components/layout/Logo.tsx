@@ -9,24 +9,19 @@ export function Logo({ className }: LogoProps) {
   return (
     <Link
       href="/"
-      aria-label="Swag Drive home"
+      aria-label="SwagDrive home"
       className={cn(
-        "inline-flex shrink-0 items-center outline-none",
-        "transition-opacity duration-[250ms] ease-[cubic-bezier(0.22,1,0.36,1)]",
-        "hover:opacity-75 focus-visible:ring-2 focus-visible:ring-brand-navy/30 focus-visible:ring-offset-2",
-        "active:opacity-60",
+        "inline-flex shrink-0 items-center outline-none focus-visible:ring-2 focus-visible:ring-[#b17ce9]/40",
         className
       )}
     >
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src="/swagdrive-logo.png"
-        alt="Swag Drive"
+        alt="SwagDrive"
         width={924}
         height={172}
-        decoding="async"
-        fetchPriority="high"
-        className="h-8 w-auto max-w-[11rem] object-contain object-left sm:h-9 sm:max-w-[12.5rem] lg:h-10 lg:max-w-[14rem]"
+        className="block h-5 w-auto max-w-[140px] object-contain object-left min-[992px]:h-[22px] min-[992px]:max-w-[160px]"
       />
     </Link>
   );

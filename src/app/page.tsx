@@ -1,15 +1,21 @@
 import HeroSection from "@/components/sections/HeroSection";
-import ShowcaseCarousel from "@/components/sections/ShowcaseCarousel";
-import SolutionsSection from "@/components/sections/SolutionsSection";
-import HowItWorksSection from "@/components/sections/HowItWorksSection";
+import LogoMarquee from "@/components/sections/LogoMarquee";
+import OfferingsSection from "@/components/sections/OfferingsSection";
+import QuoteSection from "@/components/sections/QuoteSection";
+import ConsolidateSection from "@/components/sections/ConsolidateSection";
+import TeamsSection from "@/components/sections/TeamsSection";
+import UseCasesSection from "@/components/sections/UseCasesSection";
 
 export default function Home() {
   return (
     <>
       <HeroSection />
-      <ShowcaseCarousel />
-      <SolutionsSection />
-      <HowItWorksSection />
+      <LogoMarquee />
+      <OfferingsSection />
+      <QuoteSection />
+      <ConsolidateSection />
+      <TeamsSection />
+      <UseCasesSection />
     </>
   );
 }

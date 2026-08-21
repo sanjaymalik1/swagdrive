@@ -10,6 +10,7 @@
   --font-sans: var(--font-inter);
   --font-mono: var(--font-geist-mono);
   --font-heading: var(--font-inter);
+  --font-satoshi: "Satoshi", sans-serif;
 
   /* Brand palette */
   --color-brand-navy-deep: var(--brand-navy-deep);
@@ -147,7 +148,81 @@
   }
 }
 
+@keyframes logo-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - 5rem));
+  }
+}
+
+.logo-scroll {
+  animation: logo-scroll 50s linear infinite;
+  transform: translateZ(0);
+}
+
+@keyframes swag-card-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.swag-card-scroll {
+  animation: swag-card-scroll 28s linear infinite;
+  transform: translateZ(0);
+  width: max-content;
+}
+
+@media (max-width: 1024px) {
+  .use-cases-scroll {
+    scrollbar-width: thin;
+    scrollbar-color: #0b7afc #eff0f2;
+  }
+
+  .use-cases-scroll::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  .use-cases-scroll::-webkit-scrollbar-track {
+    background-color: #eff0f2;
+    border-radius: 4px;
+  }
+
+  .use-cases-scroll::-webkit-scrollbar-thumb {
+    background: #0b7afc;
+    border-radius: 4px;
+  }
+}
+
+.offerings-card-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: var(--offerings-scroll, #00c036) #fff;
+}
+
+.offerings-card-scroll::-webkit-scrollbar {
+  height: 4px;
+}
+
+.offerings-card-scroll::-webkit-scrollbar-track {
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+.offerings-card-scroll::-webkit-scrollbar-thumb {
+  background: var(--offerings-scroll, #00c036);
+  border-radius: 4px;
+}
+
 @media (prefers-reduced-motion: reduce) {
+  .logo-scroll,
+  .swag-card-scroll {
+    animation: none;
+  }
+
   .motion-safe-animate,
   .animate-in {
     animation-duration: 0.01ms !important;
