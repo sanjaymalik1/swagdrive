@@ -3,10 +3,18 @@
 import { useEffect, useState, type ComponentType } from "react";
 import Link from "next/link";
 import {
+  CalendarDays,
+  Factory,
+  Gift,
   LayoutDashboard,
   Menu,
+  Package,
+  Palette,
+  Sparkles,
   Store,
   Ticket,
+  Users,
+  Warehouse,
   X,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -40,23 +48,31 @@ function ChevronDown({ className }: { className?: string }) {
   );
 }
 
-const PLATFORM_ICONS: Record<
+const NAV_ICONS: Record<
   string,
   ComponentType<{ className?: string; strokeWidth?: number }>
 > = {
   "CRM Dashboard": LayoutDashboard,
   "Branded Redeem Pages": Ticket,
   "Swag Store/Shop": Store,
+  "Global Warehousing": Warehouse,
+  "Events Fulfillment": CalendarDays,
+  "Sourcing & Manufacturing": Factory,
+  "Swag Management": Package,
+  "Employee Engagement": Users,
+  "Personalized Gifting": Gift,
+  "Creative Services": Palette,
+  "Swag Inspiration": Sparkles,
 };
 
-function PlatformDropdownItem({
+function NavDropdownItem({
   item,
   onNavigate,
 }: {
   item: NavChild;
   onNavigate?: () => void;
 }) {
-  const Icon = PLATFORM_ICONS[item.label] ?? LayoutDashboard;
+  const Icon = NAV_ICONS[item.label] ?? LayoutDashboard;
 
   return (
     <Link
@@ -88,6 +104,7 @@ function DesktopNavItem({
 }) {
   const hasChildren = Boolean(link.children?.length);
   const [open, setOpen] = useState(false);
+  const twoColumns = link.columns === 2;
 
   const setMenuOpen = (next: boolean) => {
     setOpen(next);
@@ -138,7 +155,10 @@ function DesktopNavItem({
 
       <div
         className={cn(
-          "absolute top-full left-1/2 z-50 w-[min(22.5rem,calc(100vw-2.5rem))] -translate-x-1/2 pt-3 transition-[opacity,transform] duration-200",
+          "absolute top-full left-1/2 z-50 -translate-x-1/2 pt-3 transition-[opacity,transform] duration-200",
+          twoColumns
+            ? "w-[min(44rem,calc(100vw-2.5rem))]"
+            : "w-[min(22.5rem,calc(100vw-2.5rem))]",
           open
             ? "pointer-events-auto translate-y-0 opacity-100"
             : "pointer-events-none -translate-y-1 opacity-0"
@@ -148,9 +168,15 @@ function DesktopNavItem({
           role="menu"
           className="overflow-hidden rounded-xl border border-[#E4E5E7] bg-white p-2 shadow-[0_16px_40px_rgba(34,30,38,0.12)]"
         >
-          <div className="flex flex-col">
+          <div
+            className={cn(
+              twoColumns
+                ? "grid grid-cols-1 gap-0 min-[768px]:grid-cols-2 min-[768px]:gap-x-1"
+                : "flex flex-col"
+            )}
+          >
             {link.children!.map((item) => (
-              <PlatformDropdownItem
+              <NavDropdownItem
                 key={item.label}
                 item={item}
                 onNavigate={() => setMenuOpen(false)}
@@ -165,8 +191,8 @@ function DesktopNavItem({
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [platformOpen, setPlatformOpen] = useState(false);
-  const [mobilePlatformOpen, setMobilePlatformOpen] = useState(false);
+  const [desktopDropdownOpen, setDesktopDropdownOpen] = useState(false);
+  const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
   const [hidden, setHidden] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -181,7 +207,7 @@ export default function Header() {
 
       setScrolled(!atTop);
 
-      if (mobileOpen || platformOpen) {
+      if (mobileOpen || desktopDropdownOpen) {
         setHidden(false);
       } else if (atTop) {
         setHidden(false);
@@ -205,7 +231,7 @@ export default function Header() {
     update();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
-  }, [mobileOpen, platformOpen]);
+  }, [mobileOpen, desktopDropdownOpen]);
 
   useEffect(() => {
     if (!mobileOpen) return;
@@ -239,9 +265,7 @@ export default function Header() {
             <DesktopNavItem
               key={link.label}
               link={link}
-              onOpenChange={
-                link.label === "Platform" ? setPlatformOpen : undefined
-              }
+              onOpenChange={setDesktopDropdownOpen}
             />
           ))}
         </nav>
@@ -298,31 +322,37 @@ export default function Header() {
                 );
               }
 
+              const expanded = mobileExpanded === link.label;
+
               return (
                 <div key={link.label} className="border-b border-[#f0eef2]">
                   <button
                     type="button"
-                    aria-expanded={mobilePlatformOpen}
-                    onClick={() => setMobilePlatformOpen((open) => !open)}
+                    aria-expanded={expanded}
+                    onClick={() =>
+                      setMobileExpanded((current) =>
+                        current === link.label ? null : link.label
+                      )
+                    }
                     className="flex w-full items-center justify-between py-4 text-left text-base font-normal text-[#221e26]"
                   >
                     <span>{link.label}</span>
                     <ChevronDown
                       className={cn(
                         "size-4 text-[#221e26] transition-transform",
-                        mobilePlatformOpen && "rotate-180"
+                        expanded && "rotate-180"
                       )}
                     />
                   </button>
-                  {mobilePlatformOpen ? (
+                  {expanded ? (
                     <div className="pb-3">
                       {link.children.map((item) => (
-                        <PlatformDropdownItem
+                        <NavDropdownItem
                           key={item.label}
                           item={item}
                           onNavigate={() => {
                             setMobileOpen(false);
-                            setMobilePlatformOpen(false);
+                            setMobileExpanded(null);
                           }}
                         />
                       ))}

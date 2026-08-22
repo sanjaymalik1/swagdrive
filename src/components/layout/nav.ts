@@ -8,6 +8,7 @@ export type NavLink = {
   label: string;
   href: string;
   children?: readonly NavChild[];
+  columns?: 1 | 2;
 };
 
 export const NAV_LINKS: readonly NavLink[] = [
@@ -32,8 +33,59 @@ export const NAV_LINKS: readonly NavLink[] = [
       },
     ],
   },
-  { label: "Capabilities", href: "/#capabilities" },
-  { label: "Design Studio", href: "/#design-studio" },
+  {
+    label: "Capabilities",
+    href: "/#capabilities",
+    columns: 2,
+    children: [
+      {
+        label: "Global Warehousing",
+        href: "/capabilities/global-warehousing",
+        description: "Store and ship swag worldwide from secure global hubs.",
+      },
+      {
+        label: "Events Fulfillment",
+        href: "/capabilities/events-fulfillment",
+        description: "Deliver swag to and from any event, on time and on brand.",
+      },
+      {
+        label: "Sourcing & Manufacturing",
+        href: "/capabilities/sourcing-manufacturing",
+        description: "Source premium products and manufacture custom swag at scale.",
+      },
+      {
+        label: "Swag Management",
+        href: "/capabilities/swag-management",
+        description: "Create, track, and send custom swag from one dashboard.",
+      },
+      {
+        label: "Employee Engagement",
+        href: "/capabilities/employee-engagement",
+        description: "Celebrate milestones and motivate teams with thoughtful gifts.",
+      },
+      {
+        label: "Personalized Gifting",
+        href: "/capabilities/personalized-gifting",
+        description: "Send hyper-personalized gifts that stand out and convert.",
+      },
+    ],
+  },
+  {
+    label: "Design Studio",
+    href: "/#design-studio",
+    children: [
+      {
+        label: "Creative Services",
+        href: "/design-studio/creative-services",
+        description: "Expert design support for logos, packaging, and brand kits.",
+      },
+      {
+        label: "Swag Inspiration",
+        href: "/design-studio/swag-inspiration",
+        description: "Browse curated ideas and trends to spark your next campaign.",
+      },
+    ],
+  },
   { label: "Company", href: "/#company" },
 ] as const;
 
