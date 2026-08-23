@@ -1,28 +1,17 @@
-const CDN =
-  "https://cdn.prod.website-files.com/64eb79e19f92b72fe47f81e8";
-
 const CARDS = [
-  {
-    src: `${CDN}/6848952b4806275d7ed4712a_13-min.jpg`,
-    tall: false,
-  },
-  {
-    src: `${CDN}/6848952b5479bc3723c9fcf8_Rectangle%203471650-min.jpg`,
-    tall: true,
-  },
-  {
-    src: `${CDN}/6848952bb4d3d499aab02214_14-min.jpg`,
-    tall: false,
-  },
-  {
-    src: `${CDN}/68756617e6375ca7ab0275e8_Frame%202134097738-min.jpg`,
-    tall: true,
-  },
+  { src: "/landing-carousel/swagupcarousal1.png", tall: false },
+  { src: "/landing-carousel/swagupcarousal2.png", tall: true },
+  { src: "/landing-carousel/swagupcarousal3.png", tall: false },
+  { src: "/landing-carousel/swagupcarousal4.png", tall: true },
+  { src: "/landing-carousel/swagupcarousal5.png", tall: false },
+  { src: "/landing-carousel/swagupcarousal6.png", tall: true },
+  { src: "/landing-carousel/swagupcarousal7.png", tall: false },
+  { src: "/landing-carousel/swagupcarousal8.png", tall: true },
 ] as const;
 
 function CarouselTrack() {
   return (
-    <div className="grid h-full w-[100vw] shrink-0 grid-cols-[1fr_0.9fr_1fr_0.9fr] gap-4 px-2 min-[1920px]:gap-6">
+    <div className="grid h-full w-[200vw] shrink-0 grid-cols-[1fr_0.9fr_1fr_0.9fr_1fr_0.9fr_1fr_0.9fr] gap-4 px-2 min-[1920px]:gap-6">
       {CARDS.map((card) => (
         <div
           key={card.src}
