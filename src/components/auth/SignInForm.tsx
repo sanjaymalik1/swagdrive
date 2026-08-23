@@ -28,7 +28,7 @@ export default function SignInForm() {
   }
 
   const fieldClass =
-    "h-11 w-full rounded-lg border border-[#102a71]/20 bg-white px-3.5 font-[family-name:var(--font-overpass)] text-[15px] text-[#001840] outline-none transition-[border-color,box-shadow] placeholder:text-[#9aa3b2] focus:border-[#102a71] focus:shadow-[0_0_0_3px_rgba(16,42,113,0.14)]";
+    "h-11 w-full rounded-lg border border-blue-secondary/20 bg-white px-3.5 font-[family-name:var(--font-overpass)] text-[15px] text-blue-primary outline-none transition-[border-color,box-shadow] placeholder:text-[#9aa3b2] focus:border-blue-secondary focus:shadow-[0_0_0_3px_rgba(5,65,123,0.14)]";
 
   return (
     <form onSubmit={handleSubmit} className="flex w-full flex-col" noValidate>
@@ -36,7 +36,7 @@ export default function SignInForm() {
         <div className="flex flex-col gap-1.5">
           <label
             htmlFor={emailId}
-            className="font-[family-name:var(--font-overpass)] text-sm font-medium text-[#001840]"
+            className="font-[family-name:var(--font-overpass)] text-sm font-medium text-blue-primary"
           >
             Email
           </label>
@@ -74,7 +74,7 @@ export default function SignInForm() {
         <div className="flex flex-col gap-1.5">
           <label
             htmlFor={passwordId}
-            className="font-[family-name:var(--font-overpass)] text-sm font-medium text-[#001840]"
+            className="font-[family-name:var(--font-overpass)] text-sm font-medium text-blue-primary"
           >
             Password
           </label>
@@ -98,7 +98,7 @@ export default function SignInForm() {
               type="button"
               onClick={() => setShowPassword((v) => !v)}
               aria-label={showPassword ? "Hide password" : "Show password"}
-              className="absolute top-1/2 right-2.5 flex size-7 -translate-y-1/2 cursor-pointer items-center justify-center rounded-md text-[#6b7280] transition-colors hover:bg-[#102a71]/6 hover:text-[#001840]"
+              className="absolute top-1/2 right-2.5 flex size-7 -translate-y-1/2 cursor-pointer items-center justify-center rounded-md text-[#6b7280] transition-colors hover:bg-blue-secondary/6 hover:text-blue-primary"
             >
               {showPassword ? (
                 <EyeOff className="size-4" strokeWidth={1.75} />
@@ -115,7 +115,7 @@ export default function SignInForm() {
       <button
         type="submit"
         disabled={loading}
-        className="inline-flex h-11 w-full cursor-pointer items-center justify-center gap-2 rounded-[3rem] border-2 border-[#fffcd3] bg-[#fff44f] px-6 text-[15px] leading-none font-normal text-[#001840] transition-colors hover:bg-[#fff784] active:bg-[#ccc23b] disabled:pointer-events-none disabled:opacity-70"
+        className="inline-flex h-11 w-full cursor-pointer items-center justify-center gap-2 rounded-[3rem] bg-yellow-primary px-6 text-[15px] leading-none font-normal text-blue-primary transition-colors hover:bg-yellow-secondary active:brightness-95 disabled:pointer-events-none disabled:opacity-70"
       >
         {loading ? (
           <>
@@ -131,7 +131,7 @@ export default function SignInForm() {
         Don&apos;t have an account?{" "}
         <Link
           href={CONTACT_HREF}
-          className="font-semibold text-[#102a71] no-underline transition-colors hover:text-[#001840]"
+          className="font-semibold text-blue-secondary no-underline transition-colors hover:text-blue-primary"
         >
           Book a demo
         </Link>
