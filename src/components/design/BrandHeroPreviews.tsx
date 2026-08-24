@@ -142,7 +142,7 @@ export function HomeHeroPreview({ palette, compact }: PreviewProps) {
   return (
     <section
       className={`font-[family-name:var(--font-lexend)] ${compact ? "px-4 pt-10 pb-4" : "px-5 pt-16 pb-6 min-[480px]:px-10 min-[480px]:pt-24"}`}
-      style={{ backgroundColor: t.cream }}
+      style={{ backgroundColor: t.surface }}
     >
       <div className="mx-auto flex w-full max-w-7xl flex-col">
         <div className="mx-auto flex w-full max-w-3xl flex-col items-center text-center">
