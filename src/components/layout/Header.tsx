@@ -3,6 +3,7 @@
 import { useEffect, useState, type ComponentType } from "react";
 import Link from "next/link";
 import {
+  ArrowUpRight,
   CalendarDays,
   Factory,
   Gift,
@@ -78,9 +79,9 @@ function NavDropdownItem({
     <Link
       href={item.href}
       onClick={onNavigate}
-      className="group/item flex gap-3.5 rounded-lg px-3 py-3 no-underline transition-colors hover:bg-[#F8F8F8]"
+      className="group/item flex gap-3.5 rounded-lg px-3 py-3 no-underline transition-colors hover:bg-yellow-secondary/40"
     >
-      <span className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-[#F3EAFB] text-[#8D12E7] transition-colors group-hover/item:bg-[#E8D0FA]">
+      <span className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-blue-primary/10 text-blue-secondary transition-colors group-hover/item:bg-blue-primary/15">
         <Icon className="size-5" strokeWidth={1.75} />
       </span>
       <span className="min-w-0 pt-0.5">
@@ -115,7 +116,7 @@ function DesktopNavItem({
     return (
       <Link
         href={link.href}
-        className="group inline-flex items-center gap-1 px-3.5 py-2 text-[0.9375rem] leading-none font-normal text-[#221e26] no-underline transition-colors hover:text-[#5c2d91]"
+        className="group inline-flex items-center gap-1 px-3.5 py-2 text-base leading-none font-medium text-[#221e26] no-underline transition-colors hover:text-blue-primary"
       >
         <span>{link.label}</span>
         <ChevronDown className="size-3.5 shrink-0 text-[#221e26] opacity-80 transition-transform duration-200 group-hover:translate-y-px" />
@@ -140,8 +141,8 @@ function DesktopNavItem({
         aria-expanded={open}
         aria-haspopup="menu"
         className={cn(
-          "group inline-flex items-center gap-1 px-3.5 py-2 text-[0.9375rem] leading-none font-normal text-[#221e26] transition-colors hover:text-[#5c2d91]",
-          open && "text-[#5c2d91]"
+          "group inline-flex items-center gap-1 px-3.5 py-2 text-base leading-none font-medium text-[#221e26] transition-colors hover:text-blue-primary",
+          open && "text-blue-primary"
         )}
       >
         <span>{link.label}</span>
@@ -280,9 +281,13 @@ export default function Header() {
 
           <Link
             href={CONTACT_HREF}
-            className="hidden h-9 items-center justify-center rounded-[3rem] border-2 border-[#fffcd3] bg-[#fff34a] px-4 text-sm leading-none font-normal text-[#221e26] no-underline transition-colors hover:bg-[#fff784] active:bg-[#ccc23b] min-[992px]:inline-flex"
+            className="group hidden h-9 items-center justify-center gap-1.5 rounded-[3rem] bg-yellow-secondary px-4 text-sm leading-none font-normal text-blue-primary no-underline transition-colors hover:bg-yellow-primary active:brightness-95 min-[992px]:inline-flex"
           >
             Book a demo
+            <ArrowUpRight
+              className="size-4 shrink-0 stroke-[2.5] transition-transform duration-200 ease-out group-hover:scale-130"
+              aria-hidden
+            />
           </Link>
 
           <button
@@ -373,9 +378,13 @@ export default function Header() {
               <Link
                 href={CONTACT_HREF}
                 onClick={() => setMobileOpen(false)}
-                className="inline-flex h-12 items-center justify-center rounded-[3rem] border-2 border-[#fffcd3] bg-[#fff34a] text-base font-normal text-[#221e26] no-underline"
+                className="group inline-flex h-12 items-center justify-center gap-1.5 rounded-[3rem] bg-yellow-secondary px-4 text-base font-normal text-blue-primary no-underline transition-colors hover:bg-yellow-primary active:brightness-95"
               >
                 Book a demo
+                <ArrowUpRight
+                  className="size-5 shrink-0 stroke-[2.5] transition-transform duration-200 ease-out group-hover:scale-130"
+                  aria-hidden
+                />
               </Link>
             </div>
           </nav>

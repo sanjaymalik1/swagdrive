@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 import { TEAM_TABS } from "./teams-data";
 
 export default function TeamsSection() {
-  const [activeId, setActiveId] = useState("human");
+  const [activeId, setActiveId] = useState("operations");
   const active = TEAM_TABS.find((tab) => tab.id === activeId) ?? TEAM_TABS[0];
 
   return (

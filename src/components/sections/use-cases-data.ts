@@ -1,37 +1,59 @@
-const MEDIA = "https://www.bystadium.com/wp-content/uploads/2024/10";
+import type { LucideIcon } from "lucide-react";
+import {
+  Briefcase,
+  Building2,
+  Cake,
+  CalendarCheck,
+  CircleDollarSign,
+  Cookie,
+  Gift,
+  HandHeart,
+  HeartHandshake,
+  Home,
+  Package,
+  PartyPopper,
+  Repeat,
+  Sparkles,
+  Store,
+  Target,
+  ThumbsUp,
+  Trophy,
+  Users,
+  UserPlus,
+} from "lucide-react";
 
 export type UseCaseItem = {
   label: string;
-  icon: string;
+  Icon: LucideIcon;
 };
 
 export const USE_CASE_COLUMNS: UseCaseItem[][] = [
   [
-    { label: "Employee Appreciation", icon: `${MEDIA}/Employee-Appreciation-2.svg` },
-    { label: "Incentives", icon: `${MEDIA}/Incentives.svg` },
-    { label: "Work Anniversaries", icon: `${MEDIA}/Work-Anniversaries.svg` },
-    { label: "Awards", icon: `${MEDIA}/Awards.svg` },
-    { label: "Work From Home Stipend", icon: `${MEDIA}/Work-From-Home-Stipend.svg` },
+    { label: "Employee Appreciation", Icon: HandHeart },
+    { label: "Incentives", Icon: CircleDollarSign },
+    { label: "Work Anniversaries", Icon: CalendarCheck },
+    { label: "Awards", Icon: Trophy },
+    { label: "Work From Home Stipend", Icon: Home },
   ],
   [
-    { label: "Rewards Redemption", icon: `${MEDIA}/Rewards-Redemption-2.svg` },
-    { label: "Employee Birthday Treats", icon: `${MEDIA}/Employee-Birthday-Treats.svg` },
-    { label: "Swag Store Redemption", icon: `${MEDIA}/Swag-Store-Redemption.svg` },
-    { label: "Boosting Morale", icon: `${MEDIA}/Boosting-Morale.svg` },
-    { label: "Kudos Program", icon: `${MEDIA}/Peer-to-Peer-Recognition.svg` },
+    { label: "Rewards Redemption", Icon: Gift },
+    { label: "Employee Birthday Treats", Icon: Cake },
+    { label: "Swag Store Redemption", Icon: Store },
+    { label: "Boosting Morale", Icon: Sparkles },
+    { label: "Kudos Program", Icon: ThumbsUp },
   ],
   [
-    { label: "Swag Distribution", icon: `${MEDIA}/Swag-Distribution.svg` },
-    { label: "Snack Perks", icon: `${MEDIA}/Snack-Perks.svg` },
-    { label: "Recurring Perks", icon: `${MEDIA}/Recurring-Perks.svg` },
-    { label: "Boosting Attendance", icon: `${MEDIA}/Boosting-Attendance.svg` },
-    { label: "New Hire Welcome", icon: `${MEDIA}/New-Hire-Welcome.svg` },
+    { label: "Swag Distribution", Icon: Package },
+    { label: "Snack Perks", Icon: Cookie },
+    { label: "Recurring Perks", Icon: Repeat },
+    { label: "Boosting Attendance", Icon: Users },
+    { label: "New Hire Welcome", Icon: UserPlus },
   ],
   [
-    { label: "Client Gifting", icon: `${MEDIA}/Client-Gifting.svg` },
-    { label: "Prospecting", icon: `${MEDIA}/Prospecting-1.svg` },
-    { label: "Celebration Shops", icon: `${MEDIA}/Celebration-Shops.svg` },
-    { label: "Boosting Response Rates", icon: `${MEDIA}/Boosting-Response-Rates.svg` },
-    { label: "Recognizing DEI Events", icon: `${MEDIA}/Recognizing-DEI-Events.svg` },
+    { label: "Client Gifting", Icon: HeartHandshake },
+    { label: "Prospecting", Icon: Target },
+    { label: "Celebration Shops", Icon: PartyPopper },
+    { label: "Boosting Response Rates", Icon: Briefcase },
+    { label: "Recognizing DEI Events", Icon: Building2 },
   ],
 ];

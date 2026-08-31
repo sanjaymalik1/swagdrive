@@ -1,20 +1,11 @@
-import { USE_CASE_COLUMNS } from "./use-cases-data";
+import { USE_CASE_COLUMNS, type UseCaseItem } from "./use-cases-data";
 
-function UseCaseRow({
-  label,
-  icon,
-}: {
-  label: string;
-  icon: string;
-}) {
+function UseCaseRow({ label, Icon }: UseCaseItem) {
   return (
     <div className="flex items-center gap-5 min-[1025px]:gap-6">
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        src={icon}
-        alt=""
-        className="size-11 shrink-0 object-contain min-[1025px]:size-[50px]"
-      />
+      <span className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-blue-primary/10 text-blue-primary min-[1025px]:size-[50px]">
+        <Icon className="size-6 min-[1025px]:size-7" strokeWidth={1.75} aria-hidden />
+      </span>
       <h4 className="m-0 font-[family-name:var(--font-overpass)] text-xs leading-6 font-normal text-[#2D2D2D] min-[768px]:leading-[18px] min-[1025px]:text-sm min-[1025px]:leading-[18px] min-[1025px]:tracking-[0.16px]">
         {label}
       </h4>

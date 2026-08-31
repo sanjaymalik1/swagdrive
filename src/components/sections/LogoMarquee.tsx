@@ -17,6 +17,10 @@ const LOGOS: Logo[] = [
   { src: "/logos/blackline.svg", alt: "BlackLine" },
 ];
 
+/** Recolor white/monochrome logos to blue-primary (#04326e) */
+const LOGO_BLUE_FILTER =
+  "brightness(0) saturate(100%) invert(12%) sepia(64%) saturate(2149%) hue-rotate(196deg) brightness(93%) contrast(101%)";
+
 function LogoTrack() {
   return (
     <div className="logo-scroll flex shrink-0 items-center gap-20">
@@ -26,6 +30,7 @@ function LogoTrack() {
           key={logo.src}
           src={logo.src}
           alt={logo.alt}
+          style={{ filter: LOGO_BLUE_FILTER }}
           className={
             logo.size === "large"
               ? "h-[2.2rem] w-auto max-h-[2.2rem] object-contain"
@@ -41,7 +46,7 @@ function LogoTrack() {
 
 export default function LogoMarquee() {
   return (
-    <section className="flex flex-col bg-[#2f1054] py-12 font-[family-name:var(--font-lexend)] text-white min-[768px]:py-16 min-[992px]:py-24">
+    <section className="flex flex-col bg-yellow-secondary py-12 font-[family-name:var(--font-lexend)] text-blue-primary min-[768px]:py-16 min-[992px]:py-24">
       {/* <h3 className="m-0 text-center text-base leading-[1.2] font-medium tracking-[-0.08rem] min-[768px]:text-[1.125rem]">
         Join top GTM leaders that use SwagDrive
       </h3> */}
