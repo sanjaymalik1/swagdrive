@@ -71,14 +71,14 @@ function StatCard({
   const count = useCountUp(value, active);
 
   return (
-    <div className="flex h-full flex-col rounded-3xl border-2 border-[#d9d9d9] bg-white p-6">
-      <div className="flex items-start font-[family-name:var(--font-lexend)] text-[2.25rem] leading-[1.1] font-normal text-[#5d209f] min-[768px]:text-[3rem] min-[992px]:text-[3.875rem]">
+    <div className="flex h-full flex-col rounded-3xl border-2 border-blue-primary/10 bg-white p-6">
+      <div className="flex items-start font-[family-name:var(--font-lexend)] text-[2.25rem] leading-[1.1] font-normal text-blue-primary min-[768px]:text-[3rem] min-[992px]:text-[3.875rem]">
         <span>+</span>
         <span>{count}</span>
         <span>{suffix}</span>
       </div>
       <div className="pt-2 min-[768px]:pt-3" />
-      <p className="m-0 font-[family-name:var(--font-lexend)] text-base leading-[1.5] font-light text-[#524f55] min-[768px]:text-[1.125rem]">
+      <p className="m-0 font-[family-name:var(--font-lexend)] text-base leading-[1.5] font-light text-black min-[768px]:text-[1.125rem]">
         {label}
       </p>
     </div>
@@ -116,7 +116,7 @@ export default function CrmImpactSection() {
         <div className="mx-auto w-full max-w-7xl">
           <h2
             className={cn(
-              "m-0 text-center text-[1.75rem] leading-[1.2] font-normal tracking-[-0.04rem] text-[#221e26]",
+              "m-0 text-center text-[1.75rem] leading-[1.2] font-normal tracking-[-0.04rem] text-black",
               "min-[768px]:text-[2.1875rem] min-[768px]:tracking-[-0.06rem]",
               "min-[992px]:text-[2.875rem] min-[992px]:tracking-[-0.08rem]"
             )}

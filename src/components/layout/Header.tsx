@@ -79,7 +79,7 @@ function NavDropdownItem({
     <Link
       href={item.href}
       onClick={onNavigate}
-      className="group/item flex gap-3.5 rounded-lg px-3 py-3 no-underline transition-colors hover:bg-yellow-secondary/40"
+      className="group/item flex gap-3.5 rounded-lg px-3 py-3 no-underline transition-colors hover:bg-[#F8F8F8]"
     >
       <span className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-blue-primary/10 text-blue-secondary transition-colors group-hover/item:bg-blue-primary/15">
         <Icon className="size-5" strokeWidth={1.75} />
