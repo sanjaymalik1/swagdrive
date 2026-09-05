@@ -43,13 +43,13 @@ export default function SwagStoreHowItWorksSection() {
 
   return (
     <section className="bg-white">
-      <div className="mx-auto w-full max-w-[80rem] overflow-hidden px-[5%] py-[60px] min-[768px]:py-20 min-[992px]:py-[100px]">
-        <h2 className="m-0 text-center font-sans text-[38px] leading-[1.2] font-semibold text-[#202124] min-[992px]:text-[48px]">
+      <div className="mx-auto w-full max-w-[1440px] px-5 py-16 min-[480px]:px-10 min-[992px]:py-24">
+        <h2 className="m-0 text-center font-[family-name:var(--font-satoshi)] text-[2rem] leading-[1.2] font-bold text-black min-[768px]:text-[2.375rem] min-[992px]:text-[3rem]">
           How it Works
         </h2>
 
         {/* Desktop / tablet */}
-        <div className="mt-16 hidden min-[768px]:flex min-[768px]:items-start min-[768px]:gap-8 min-[992px]:gap-10">
+        <div className="mt-12 hidden min-[768px]:flex min-[768px]:items-start min-[768px]:gap-8 min-[992px]:mt-16 min-[992px]:gap-10">
           <div className="flex w-[40%] shrink-0 flex-col gap-4">
             {STEPS.map((step, index) => {
               const isActive = index === activeIndex;
@@ -58,24 +58,28 @@ export default function SwagStoreHowItWorksSection() {
                   key={step.title}
                   type="button"
                   onClick={() => setActiveIndex(index)}
-                  className={`w-full rounded-2xl border px-5 py-5 text-left shadow-[0_10px_15px_-3px_rgba(43,127,255,0.05),0_4px_6px_-4px_rgba(43,127,255,0.05)] transition-colors ${
+                  onMouseEnter={() => setActiveIndex(index)}
+                  className={`w-full rounded-2xl border px-5 py-5 text-left transition-colors ${
                     isActive
-                      ? "border-[#CAD4E6] bg-[#F0F2FF]"
-                      : "border-[#F3F4F6] bg-white"
+                      ? "border-blue-primary/20 bg-yellow-tertiary"
+                      : "border-blue-primary/10 bg-white"
                   }`}
                 >
                   <div className="flex items-start gap-4">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                      src={isActive ? step.selectedIcon : step.unselectedIcon}
-                      alt=""
-                      className="h-8 w-8 shrink-0"
-                    />
+                    <span
+                      className={`flex size-8 shrink-0 items-center justify-center rounded-full font-[family-name:var(--font-satoshi)] text-sm font-bold ${
+                        isActive
+                          ? "bg-blue-primary text-yellow-secondary"
+                          : "bg-blue-primary/10 text-blue-primary"
+                      }`}
+                    >
+                      {index + 1}
+                    </span>
                     <div className="min-w-0">
-                      <div className="mb-2 font-sans text-2xl leading-[1.2] font-medium text-[#0A0A0A]">
+                      <div className="mb-2 font-[family-name:var(--font-satoshi)] text-2xl leading-[1.2] font-semibold text-blue-primary">
                         {step.title}
                       </div>
-                      <div className="font-sans text-base leading-[1.3] text-[#717182]">
+                      <div className="font-[family-name:var(--font-overpass)] text-base leading-[1.3] text-black">
                         {step.description}
                       </div>
                     </div>
@@ -104,24 +108,27 @@ export default function SwagStoreHowItWorksSection() {
                 key={step.title}
                 type="button"
                 onClick={() => setActiveIndex(index)}
-                className={`flex w-full flex-col gap-4 rounded-2xl border p-5 text-left shadow-[0_10px_15px_-3px_rgba(43,127,255,0.05),0_4px_6px_-4px_rgba(43,127,255,0.05)] ${
+                className={`flex w-full flex-col gap-4 rounded-2xl border p-5 text-left ${
                   isActive
-                    ? "border-[#CAD4E6] bg-[#F0F2FF]"
-                    : "border-[#F3F4F6] bg-white"
+                    ? "border-blue-primary/20 bg-yellow-tertiary"
+                    : "border-blue-primary/10 bg-white"
                 }`}
               >
                 <div className="flex items-start gap-4">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={isActive ? step.selectedIcon : step.unselectedIcon}
-                    alt=""
-                    className="h-8 w-8 shrink-0"
-                  />
+                  <span
+                    className={`flex size-8 shrink-0 items-center justify-center rounded-full font-[family-name:var(--font-satoshi)] text-sm font-bold ${
+                      isActive
+                        ? "bg-blue-primary text-yellow-secondary"
+                        : "bg-blue-primary/10 text-blue-primary"
+                    }`}
+                  >
+                    {index + 1}
+                  </span>
                   <div className="min-w-0">
-                    <div className="mb-2 font-sans text-2xl leading-[1.2] font-medium text-[#0A0A0A]">
+                    <div className="mb-2 font-[family-name:var(--font-satoshi)] text-2xl leading-[1.2] font-semibold text-blue-primary">
                       {step.title}
                     </div>
-                    <div className="font-sans text-base leading-[1.2] text-[#717182]">
+                    <div className="font-[family-name:var(--font-overpass)] text-base leading-[1.2] text-black">
                       {step.description}
                     </div>
                   </div>

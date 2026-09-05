@@ -46,7 +46,7 @@ function LogoTrack() {
 
 export default function LogoMarquee() {
   return (
-    <section className="flex flex-col bg-yellow-secondary py-12 font-[family-name:var(--font-lexend)] text-blue-primary min-[768px]:py-16 min-[992px]:py-24">
+    <section className="flex flex-col bg-yellow-secondary py-16 font-[family-name:var(--font-lexend)] text-blue-primary min-[992px]:py-24">
       {/* <h3 className="m-0 text-center text-base leading-[1.2] font-medium tracking-[-0.08rem] min-[768px]:text-[1.125rem]">
         Join top GTM leaders that use SwagDrive
       </h3> */}

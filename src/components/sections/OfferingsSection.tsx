@@ -246,7 +246,7 @@ function TabButton({
       aria-selected={selected}
       onClick={onSelect}
       className={cn(
-        "relative flex w-full flex-row items-center gap-6 px-7 py-5 text-left font-[family-name:var(--font-satoshi)] text-lg leading-6 font-bold text-[#4F5052] min-[768px]:flex-1 min-[768px]:basis-0 min-[768px]:flex-col min-[768px]:justify-start min-[768px]:gap-1 min-[768px]:border-r min-[768px]:border-r-[#CDCED0] min-[768px]:px-2.5 min-[768px]:py-1 min-[768px]:text-center min-[768px]:text-[10px] min-[768px]:leading-4 min-[1025px]:gap-2.5 min-[1025px]:px-[11px] min-[1025px]:py-[11px] min-[1025px]:text-[15px] min-[1025px]:leading-[18px]",
+        "relative flex w-full cursor-pointer flex-row items-center gap-6 px-7 py-5 text-left font-[family-name:var(--font-satoshi)] text-lg leading-6 font-bold text-[#4F5052] min-[768px]:flex-1 min-[768px]:basis-0 min-[768px]:flex-col min-[768px]:justify-start min-[768px]:gap-1 min-[768px]:border-r min-[768px]:border-r-[#CDCED0] min-[768px]:px-2.5 min-[768px]:py-1 min-[768px]:text-center min-[768px]:text-[10px] min-[768px]:leading-4 min-[1025px]:gap-2.5 min-[1025px]:px-[11px] min-[1025px]:py-[11px] min-[1025px]:text-[15px] min-[1025px]:leading-[18px]",
         selected ? "bg-[#EFF0F2]" : "bg-[#F8F8F8] hover:bg-[#EFF0F2]",
         "min-[768px]:border-b-[3px] min-[1025px]:border-b-[5px]",
         "last:min-[768px]:border-r-0"
@@ -315,7 +315,10 @@ export default function OfferingsSection() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="bg-white pb-10 min-[768px]:pb-11">
+    <section
+      ref={sectionRef}
+      className="bg-white px-5 py-16 min-[480px]:px-10 min-[992px]:py-24"
+    >
       <div
         className={cn(
           "mx-auto w-full max-w-[1440px] transition-[opacity,transform] duration-700 ease-out",
@@ -324,7 +327,7 @@ export default function OfferingsSection() {
             : "translate-y-6 opacity-0"
         )}
       >
-        <div className="mx-auto flex max-w-[650px] flex-col items-center px-11 pt-20 pb-10 text-center min-[768px]:max-w-[388px] min-[768px]:px-0 min-[768px]:pt-16 min-[768px]:pb-8 min-[1025px]:max-w-[650px] min-[1025px]:pt-[54px] min-[1025px]:pb-[27px]">
+        <div className="mx-auto mb-8 flex max-w-[650px] flex-col items-center text-center min-[768px]:mb-10 min-[768px]:max-w-[388px] min-[1025px]:mb-12 min-[1025px]:max-w-[650px]">
           <p className="m-0 mb-2 font-[family-name:var(--font-overpass)] text-[10px] leading-3 font-bold tracking-[1px] text-[#2D2D2D] uppercase min-[768px]:mb-2 min-[768px]:leading-[14px] min-[1025px]:mb-1 min-[1025px]:text-base min-[1025px]:leading-6">
             OUR OFFERINGS
           </p>

@@ -3,7 +3,7 @@ import { ArrowUpRight } from "lucide-react";
 
 export default function HeroSection() {
   return (
-    <section className="bg-white px-5 pt-20 pb-6 font-[family-name:var(--font-lexend)] min-[480px]:px-10 min-[480px]:pt-34">
+    <section className="bg-white px-5 pt-24 pb-16 font-[family-name:var(--font-lexend)] min-[480px]:px-10 min-[768px]:pt-28 min-[992px]:pt-32 min-[992px]:pb-24">
       <div className="mx-auto flex w-full max-w-7xl flex-col">
         <div className="mx-auto flex w-full max-w-3xl flex-col items-center text-center">
           <h1 className="m-0 text-[2.5rem] leading-[1.1] font-normal tracking-[-0.09rem] text-blue-primary min-[768px]:text-[3rem] min-[768px]:tracking-[-0.12rem] min-[992px]:text-[3.875rem] min-[992px]:tracking-[-0.155rem]">

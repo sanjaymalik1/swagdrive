@@ -10,9 +10,9 @@ export default function TeamsSection() {
   const active = TEAM_TABS.find((tab) => tab.id === activeId) ?? TEAM_TABS[0];
 
   return (
-    <section className="bg-white py-7 min-[768px]:py-8 min-[992px]:py-11">
-      <div className="mx-auto w-full max-w-[1440px] px-0 min-[768px]:px-11 min-[1025px]:px-[75px] min-[1281px]:px-44">
-        <h2 className="mb-[26px] px-[50px] text-center font-[family-name:var(--font-satoshi)] text-[18px] leading-8 font-bold text-[#2D2D2D] min-[768px]:mb-8 min-[768px]:px-0 min-[768px]:text-2xl min-[768px]:leading-[30px] min-[992px]:mb-10 min-[992px]:text-[32px] min-[992px]:leading-10">
+    <section className="bg-white py-16 min-[992px]:py-24">
+      <div className="mx-auto w-full max-w-[1440px] px-5 min-[480px]:px-10 min-[768px]:px-11 min-[1025px]:px-[75px] min-[1281px]:px-44">
+        <h2 className="mb-8 px-0 text-center font-[family-name:var(--font-satoshi)] text-[18px] leading-8 font-bold text-[#2D2D2D] min-[768px]:mb-10 min-[768px]:text-2xl min-[768px]:leading-[30px] min-[992px]:mb-12 min-[992px]:text-[32px] min-[992px]:leading-10">
           One solution for all your teams
         </h2>
 
@@ -33,7 +33,7 @@ export default function TeamsSection() {
                     aria-selected={selected}
                     onClick={() => setActiveId(tab.id)}
                     className={cn(
-                      "shrink-0 border-b border-[#cdced0] px-4 py-4 text-left font-[family-name:var(--font-satoshi)] text-sm leading-[18px] font-bold whitespace-nowrap min-[768px]:text-base min-[768px]:leading-[23px] min-[992px]:border-b min-[992px]:border-l-[10px] min-[992px]:py-7 min-[992px]:pr-2.5 min-[992px]:pl-[35px] min-[992px]:text-xl min-[992px]:whitespace-normal",
+                      "shrink-0 cursor-pointer border-b border-[#cdced0] px-4 py-4 text-left font-[family-name:var(--font-satoshi)] text-sm leading-[18px] font-bold whitespace-nowrap min-[768px]:text-base min-[768px]:leading-[23px] min-[992px]:border-b min-[992px]:border-l-[10px] min-[992px]:py-7 min-[992px]:pr-2.5 min-[992px]:pl-[35px] min-[992px]:text-xl min-[992px]:whitespace-normal",
                       !selected &&
                         "bg-[#EFF0F2] text-[#4F5052] hover:bg-[#F8F8F8] min-[992px]:border-l-[#EFF0F2]",
                       selected && "text-[#2D2D2D]",

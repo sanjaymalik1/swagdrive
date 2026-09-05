@@ -35,8 +35,8 @@ function CarouselTrack() {
 
 export default function ConsolidateSection() {
   return (
-    <section className="bg-[#F8F8F8]">
-      <div className="mx-auto w-full max-w-[1440px] px-6 pt-8 min-[768px]:px-0 min-[768px]:pt-9 min-[992px]:pt-[60px]">
+    <section className="bg-[#F8F8F8] py-16 min-[992px]:py-24">
+      <div className="mx-auto w-full max-w-[1440px] px-5 min-[480px]:px-10">
         <div className="mx-auto max-w-[746px] text-center">
           <h2 className="m-0 mb-2.5 font-[family-name:var(--font-satoshi)] text-2xl leading-8 font-bold text-black min-[768px]:text-2xl min-[768px]:leading-[30px] min-[992px]:mb-5 min-[992px]:text-[32px] min-[992px]:leading-10">
             Consolidate all your gifting,
@@ -49,7 +49,7 @@ export default function ConsolidateSection() {
         </div>
       </div>
 
-      <div className="mt-8 overflow-hidden pb-8 min-[768px]:mt-10 min-[768px]:pb-9 min-[992px]:mt-12 min-[992px]:pb-[65px]">
+      <div className="mt-8 overflow-hidden min-[768px]:mt-10 min-[992px]:mt-12">
         <div className="swag-card-scroll flex h-[70vw] min-[480px]:h-[30vw] min-[1920px]:h-[24vw]">
           <CarouselTrack />
           <CarouselTrack />
