@@ -22,7 +22,7 @@ export const TEAM_TABS: TeamTab[] = [
     heading: "Streamline your company’s processes",
     description:
       "Use SwagDrive to take your processes to the next level, from onboarding to performance goals.",
-    href: "/gallery",
+    href: "/capabilities/swag-management",
     icon: `${MEDIA}/Operation-info.svg`,
     iconAlt: "Operations",
     bullets: [
@@ -42,7 +42,7 @@ export const TEAM_TABS: TeamTab[] = [
     heading: "Enrich your marketing efforts",
     description:
       "Increase brand awareness, boost marketing campaigns, and attract new customers with SwagDrive.",
-    href: "/products",
+    href: "/design-studio/creative-services",
     icon: `${MEDIA}/marketing-icon.svg`,
     iconAlt: "Marketing and Branding",
     bullets: [
@@ -62,7 +62,7 @@ export const TEAM_TABS: TeamTab[] = [
     heading: "Shape company culture with rewards",
     description:
       "Foster a positive team culture with rewards, recognition, and gifting.",
-    href: "/use-cases",
+    href: "/capabilities/employee-engagement",
     icon: `${MEDIA}/Team-info.svg`,
     iconAlt: "Team Leaders",
     bullets: [
@@ -81,7 +81,7 @@ export const TEAM_TABS: TeamTab[] = [
     heading: "Lead your sales team to success",
     description:
       "Equip your sales team with the tools they need to secure wins.",
-    href: "/get-quote",
+    href: "/platform/crm",
     icon: `${MEDIA}/sales-icon.svg`,
     iconAlt: "Sales",
     bullets: [
@@ -100,7 +100,7 @@ export const TEAM_TABS: TeamTab[] = [
     heading: "Empower Your Employees",
     description:
       "Optimize HR processes, recognize employees, and nurture the employee experience with SwagDrive.",
-    href: "/use-cases",
+    href: "/capabilities/employee-engagement",
     icon: `${MEDIA}/Human-Resources-Icon.svg`,
     iconAlt: "Human Resources",
     bullets: [
@@ -119,7 +119,7 @@ export const TEAM_TABS: TeamTab[] = [
     heading: "Make every event remarkable",
     description:
       "Every aspect of the event matters! Ensure a memorable experience with gifts they’ll love.",
-    href: "/contact",
+    href: "/capabilities/events-fulfillment",
     icon: `${MEDIA}/Event-manager-tab.svg`,
     iconAlt: "Event Managers",
     bullets: [

@@ -182,6 +182,12 @@
   width: max-content;
 }
 
+.swag-card-scroll-reverse {
+  animation: swag-card-scroll 34s linear infinite reverse;
+  transform: translateZ(0);
+  width: max-content;
+}
+
 @media (max-width: 1024px) {
   .use-cases-scroll {
     scrollbar-width: thin;
@@ -224,7 +230,8 @@
 
 @media (prefers-reduced-motion: reduce) {
   .logo-scroll,
-  .swag-card-scroll {
+  .swag-card-scroll,
+  .swag-card-scroll-reverse {
     animation: none;
   }
 

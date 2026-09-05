@@ -36,7 +36,7 @@ export const OFFERING_TABS: OfferingTab[] = [
     headingColor: "#083467",
     panelBg: "#CEE4FE",
     listBg: "#EBF4FF",
-    href: "/products",
+    href: "/platform/swag-store",
     layout: "shops",
     listEyebrow: "PERFECT FOR:",
     listItems: [
@@ -59,7 +59,7 @@ export const OFFERING_TABS: OfferingTab[] = [
     headingColor: "#226104",
     panelBg: "#D8F1CC",
     listBg: "#EFF9EB",
-    href: "/use-cases",
+    href: "/capabilities/personalized-gifting",
     layout: "cards",
     cards: [
       {
@@ -99,7 +99,7 @@ export const OFFERING_TABS: OfferingTab[] = [
     headingColor: "#083467",
     panelBg: "#CEE4FE",
     listBg: "#EBF4FF",
-    href: "/use-cases",
+    href: "/capabilities/employee-engagement",
     layout: "cards",
     cards: [
       {
@@ -135,7 +135,7 @@ export const OFFERING_TABS: OfferingTab[] = [
     headingColor: "#56440C",
     panelBg: "#FEF3CC",
     listBg: "#FEFAEE",
-    href: "/gallery",
+    href: "/capabilities/events-fulfillment",
     layout: "cards",
     cards: [
       {
@@ -171,7 +171,7 @@ export const OFFERING_TABS: OfferingTab[] = [
     headingColor: "#7D102E",
     panelBg: "#FEEBF0",
     listBg: "#FDCEDA",
-    href: "/use-cases",
+    href: "/capabilities/employee-engagement",
     layout: "kudos",
     listItems: [
       "Employee-to-employee",
@@ -192,7 +192,7 @@ export const OFFERING_TABS: OfferingTab[] = [
     headingColor: "#226104",
     panelBg: "#D8F1CC",
     listBg: "#EFF9EB",
-    href: "/products",
+    href: "/capabilities/swag-management",
     layout: "cards",
     cards: [
       { title: "VIP Gifts", image: `${MEDIA}/VIP-Gifts-1.png` },
@@ -243,7 +243,7 @@ export const OFFERING_TABS: OfferingTab[] = [
     headingColor: "#083467",
     panelBg: "#CEE4FE",
     listBg: "#EBF4FF",
-    href: "/products",
+    href: "/contact",
     layout: "cards",
     cards: [
       {

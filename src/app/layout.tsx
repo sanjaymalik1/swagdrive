@@ -3,6 +3,7 @@ import { Inter, Lexend, Overpass } from "next/font/google";
 import { Toaster } from "sonner";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { SiteFooter } from "@/components/layout/SiteFooter";
+import { ContactCircularReveal } from "@/components/transitions/ContactCircularReveal";
 import { SITE_CONFIG } from "@/lib/constants";
 import "./globals.css";
 
@@ -65,10 +66,12 @@ export default function RootLayout({
         />
       </head>
       <body className="flex min-h-full flex-col font-sans">
-        <SiteHeader />
-        <main className="flex-1">{children}</main>
-        <SiteFooter />
-        <Toaster richColors position="top-right" />
+        <ContactCircularReveal>
+          <SiteHeader />
+          <main className="flex-1">{children}</main>
+          <SiteFooter />
+          <Toaster richColors position="top-right" />
+        </ContactCircularReveal>
       </body>
     </html>
   );
