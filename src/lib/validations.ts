@@ -27,9 +27,10 @@ export const quoteRequestSchema = z.object({
 
 export const contactFormSchema = z.object({
   fullName: z.string().min(2, "Name must be at least 2 characters"),
-  email:    z.string().email("Enter a valid email address"),
-  phone:    indianPhone.optional(),
-  message:  z
+  companyName: z.string().min(2, "Company name must be at least 2 characters"),
+  email: z.string().email("Enter a valid email address"),
+  phone: indianPhone,
+  message: z
     .string()
     .min(10, "Message must be at least 10 characters")
     .max(2000, "Message must be under 2000 characters"),

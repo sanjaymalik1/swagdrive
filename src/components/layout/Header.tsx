@@ -276,7 +276,7 @@ export default function Header() {
             href={SIGN_IN_HREF}
             className="hidden h-9 items-center justify-center rounded-[3rem] border border-[#e8e6ea] bg-white px-4 text-sm leading-none font-normal text-[#221e26] no-underline transition-colors hover:bg-[#f7f5f8] min-[992px]:inline-flex"
           >
-            Sign in
+            Sign in / Sign up
           </Link>
 
           <Link
@@ -373,7 +373,7 @@ export default function Header() {
                 onClick={() => setMobileOpen(false)}
                 className="inline-flex h-12 items-center justify-center rounded-[3rem] border border-[#e8e6ea] bg-white text-base font-normal text-[#221e26] no-underline"
               >
-                Sign in
+                Sign in / Sign up
               </Link>
               <Link
                 href={CONTACT_HREF}
