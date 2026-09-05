@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import CreativeServicesHeroSection from "@/components/sections/CreativeServicesHeroSection";
+import CreativeServicesWhySection from "@/components/sections/CreativeServicesWhySection";
+import CreativeServicesPointersSection from "@/components/sections/CreativeServicesPointersSection";
+import CreativeServicesCtaSection from "@/components/sections/CreativeServicesCtaSection";
 
 export const metadata: Metadata = {
   title: "Creative Services",
@@ -11,6 +14,9 @@ export default function CreativeServicesPage() {
   return (
     <>
       <CreativeServicesHeroSection />
+      <CreativeServicesWhySection />
+      <CreativeServicesPointersSection />
+      <CreativeServicesCtaSection />
     </>
   );
 }

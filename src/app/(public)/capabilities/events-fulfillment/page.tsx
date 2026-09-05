@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import EventsFulfillmentHeroSection from "@/components/sections/EventsFulfillmentHeroSection";
+import EventsFulfillmentWhyChooseSection from "@/components/sections/EventsFulfillmentWhyChooseSection";
+import EventsFulfillmentDetailsSection from "@/components/sections/EventsFulfillmentDetailsSection";
 
 export const metadata: Metadata = {
   title: "Events Fulfillment",
@@ -11,6 +13,8 @@ export default function EventsFulfillmentPage() {
   return (
     <>
       <EventsFulfillmentHeroSection />
+      <EventsFulfillmentWhyChooseSection />
+      <EventsFulfillmentDetailsSection />
     </>
   );
 }

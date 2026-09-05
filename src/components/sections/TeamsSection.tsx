@@ -32,6 +32,7 @@ export default function TeamsSection() {
                     role="tab"
                     aria-selected={selected}
                     onClick={() => setActiveId(tab.id)}
+                    onMouseEnter={() => setActiveId(tab.id)}
                     className={cn(
                       "shrink-0 cursor-pointer border-b border-[#cdced0] px-4 py-4 text-left font-[family-name:var(--font-satoshi)] text-sm leading-[18px] font-bold whitespace-nowrap min-[768px]:text-base min-[768px]:leading-[23px] min-[992px]:border-b min-[992px]:border-l-[10px] min-[992px]:py-7 min-[992px]:pr-2.5 min-[992px]:pl-[35px] min-[992px]:text-xl min-[992px]:whitespace-normal",
                       !selected &&

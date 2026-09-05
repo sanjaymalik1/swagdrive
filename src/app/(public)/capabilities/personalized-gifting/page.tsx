@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import PersonalizedGiftingHeroSection from "@/components/sections/PersonalizedGiftingHeroSection";
+import PersonalizedGiftingInvestSection from "@/components/sections/PersonalizedGiftingInvestSection";
+import PersonalizedGiftingSolutionsSection from "@/components/sections/PersonalizedGiftingSolutionsSection";
+import PersonalizedGiftingCtaSection from "@/components/sections/PersonalizedGiftingCtaSection";
 
 export const metadata: Metadata = {
   title: "Personalized Gifting",
@@ -11,6 +14,9 @@ export default function PersonalizedGiftingPage() {
   return (
     <>
       <PersonalizedGiftingHeroSection />
+      <PersonalizedGiftingInvestSection />
+      <PersonalizedGiftingSolutionsSection />
+      <PersonalizedGiftingCtaSection />
     </>
   );
 }

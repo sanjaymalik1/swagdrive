@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import SourcingManufacturingHeroSection from "@/components/sections/SourcingManufacturingHeroSection";
+import SourcingManufacturingPointersSection from "@/components/sections/SourcingManufacturingPointersSection";
 
 export const metadata: Metadata = {
   title: "Sourcing & Manufacturing",
@@ -11,6 +12,7 @@ export default function SourcingManufacturingPage() {
   return (
     <>
       <SourcingManufacturingHeroSection />
+      <SourcingManufacturingPointersSection />
     </>
   );
 }

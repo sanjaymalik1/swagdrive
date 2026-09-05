@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import GlobalWarehousingHeroSection from "@/components/sections/GlobalWarehousingHeroSection";
 import GlobalWarehousingSolutionsSection from "@/components/sections/GlobalWarehousingSolutionsSection";
+import GlobalWarehousingCtaSection from "@/components/sections/GlobalWarehousingCtaSection";
 
 export const metadata: Metadata = {
   title: "Global Warehousing",
@@ -13,6 +14,7 @@ export default function GlobalWarehousingPage() {
     <>
       <GlobalWarehousingHeroSection />
       <GlobalWarehousingSolutionsSection />
+      <GlobalWarehousingCtaSection />
     </>
   );
 }

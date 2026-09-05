@@ -245,6 +245,7 @@ function TabButton({
       role="tab"
       aria-selected={selected}
       onClick={onSelect}
+      onMouseEnter={onSelect}
       className={cn(
         "relative flex w-full cursor-pointer flex-row items-center gap-6 px-7 py-5 text-left font-[family-name:var(--font-satoshi)] text-lg leading-6 font-bold text-[#4F5052] min-[768px]:flex-1 min-[768px]:basis-0 min-[768px]:flex-col min-[768px]:justify-start min-[768px]:gap-1 min-[768px]:border-r min-[768px]:border-r-[#CDCED0] min-[768px]:px-2.5 min-[768px]:py-1 min-[768px]:text-center min-[768px]:text-[10px] min-[768px]:leading-4 min-[1025px]:gap-2.5 min-[1025px]:px-[11px] min-[1025px]:py-[11px] min-[1025px]:text-[15px] min-[1025px]:leading-[18px]",
         selected ? "bg-[#EFF0F2]" : "bg-[#F8F8F8] hover:bg-[#EFF0F2]",
