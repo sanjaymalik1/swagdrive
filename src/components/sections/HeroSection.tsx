@@ -36,20 +36,14 @@ export default function HeroSection() {
           </Link>
         </div>
 
-        <div className="pt-12 min-[992px]:pt-[3.75rem]" />
+        <div className="pt-8 min-[992px]:pt-10" />
 
         <div className="w-full">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/hero/hero-desktop.avif"
-            alt=""
-            className="hidden h-auto w-full object-contain min-[992px]:block"
-          />
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/hero/hero-mobile.avif"
-            alt=""
-            className="block h-auto w-full object-contain min-[992px]:hidden"
+            src="/hero/hero-collage.jpg"
+            alt="SwagDrive marketplace, insights, inventory, and branded swag"
+            className="h-auto w-full object-contain"
           />
         </div>
       </div>
