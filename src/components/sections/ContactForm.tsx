@@ -49,7 +49,11 @@ const fields: {
   },
 ];
 
-export default function ContactForm() {
+export default function ContactForm({
+  submitLabel = "Submit",
+}: {
+  submitLabel?: string;
+}) {
   const [submitting, setSubmitting] = useState(false);
   const {
     register,
@@ -126,10 +130,10 @@ export default function ContactForm() {
         </Label>
         <Textarea
           id="message"
-          rows={5}
+          rows={4}
           placeholder="What would your ideal solution look like? Anything else we should know?"
           aria-invalid={Boolean(errors.message)}
-          className="min-h-[8.5rem] rounded-xl border-blue-primary/15 bg-white px-4 py-3 text-base text-blue-primary placeholder:text-muted-foreground md:text-base"
+          className="min-h-[7rem] rounded-xl border-blue-primary/15 bg-white px-4 py-3 text-base text-blue-primary placeholder:text-muted-foreground md:text-base"
           {...register("message")}
         />
         {errors.message ? (
@@ -137,13 +141,13 @@ export default function ContactForm() {
         ) : null}
       </div>
 
-      <div className="pt-2">
+      <div className="pt-1">
         <button
           type="submit"
           disabled={submitting}
           className="group inline-flex w-full cursor-pointer items-center justify-center gap-2 rounded-[3rem] bg-blue-primary px-5 py-3.5 text-center font-[family-name:var(--font-lexend)] text-base leading-none font-normal text-yellow-secondary no-underline transition-opacity disabled:cursor-not-allowed disabled:opacity-60 min-[640px]:w-auto min-[640px]:min-w-[11rem]"
         >
-          {submitting ? "Sending…" : "Submit"}
+          {submitting ? "Sending…" : submitLabel}
           <ArrowUpRight
             className="size-5 shrink-0 stroke-[2.5] transition-transform duration-200 ease-out group-hover:scale-130"
             aria-hidden

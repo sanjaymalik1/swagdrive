@@ -9,7 +9,7 @@ import {
 } from "react";
 import { usePathname, useRouter } from "next/navigation";
 
-const CONTACT_PATH = "/contact";
+const CONTACT_PATH = "/book-a-demo";
 const EXPAND_MS = 480;
 const NAVIGATE_AT_MS = 240;
 const FADE_MS = 220;

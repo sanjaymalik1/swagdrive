@@ -37,7 +37,7 @@ export default function EmployeeEngagementHeroSection() {
               <div className="pt-7 min-[768px]:pt-8 min-[992px]:pt-10" />
 
               <Link
-                href="/contact"
+                href="/book-a-demo"
                 className="group inline-flex items-center gap-2 rounded-[3rem] bg-blue-primary px-5 py-3.5 text-center text-base leading-none font-normal text-yellow-secondary no-underline"
               >
                 Book a demo

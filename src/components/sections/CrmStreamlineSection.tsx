@@ -19,7 +19,7 @@ export default function CrmStreamlineSection() {
         </h2>
         <div className="flex flex-wrap items-center justify-center gap-4">
           <Link
-            href="/contact"
+            href="/book-a-demo"
             className="group inline-flex items-center gap-2 rounded-[3rem] bg-yellow-secondary px-5 py-3.5 text-center text-base leading-none font-normal text-blue-primary no-underline transition-colors hover:bg-yellow-primary active:brightness-95"
           >
             Book a demo

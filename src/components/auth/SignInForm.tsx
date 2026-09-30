@@ -3,7 +3,7 @@
 import { useId, useState, type FormEvent } from "react";
 import Link from "next/link";
 import { Eye, EyeOff, Loader2 } from "lucide-react";
-import { CONTACT_HREF } from "@/components/layout/nav";
+import { BOOK_DEMO_HREF } from "@/components/layout/nav";
 
 export default function SignInForm() {
   const emailId = useId();
@@ -130,7 +130,7 @@ export default function SignInForm() {
       <p className="mt-6 m-0 text-center font-[family-name:var(--font-overpass)] text-sm leading-5 text-[#4a5568]">
         Don&apos;t have an account?{" "}
         <Link
-          href={CONTACT_HREF}
+          href={BOOK_DEMO_HREF}
           className="font-semibold text-blue-secondary no-underline transition-colors hover:text-blue-primary"
         >
           Book a demo

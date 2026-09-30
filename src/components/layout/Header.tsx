@@ -4,10 +4,15 @@ import { useEffect, useState, type ComponentType } from "react";
 import Link from "next/link";
 import {
   ArrowUpRight,
+  Briefcase,
   CalendarDays,
   Factory,
   Gift,
+  Handshake,
+  Info,
   LayoutDashboard,
+  Leaf,
+  Mail,
   Menu,
   Package,
   Palette,
@@ -21,7 +26,7 @@ import {
 import { cn } from "@/lib/utils";
 import { Logo } from "./Logo";
 import {
-  CONTACT_HREF,
+  BOOK_DEMO_HREF,
   NAV_LINKS,
   SIGN_IN_HREF,
   type NavChild,
@@ -64,6 +69,11 @@ const NAV_ICONS: Record<
   "Personalized Gifting": Gift,
   "Creative Services": Palette,
   "Swag Inspiration": Sparkles,
+  "About us": Info,
+  Sustainability: Leaf,
+  "Become a Vendor": Handshake,
+  Careers: Briefcase,
+  "Contact us": Mail,
 };
 
 function NavDropdownItem({
@@ -74,14 +84,23 @@ function NavDropdownItem({
   onNavigate?: () => void;
 }) {
   const Icon = NAV_ICONS[item.label] ?? LayoutDashboard;
+  const isContactUs = item.label === "Contact us";
 
   return (
     <Link
       href={item.href}
       onClick={onNavigate}
-      className="group/item flex gap-3.5 rounded-lg px-3 py-3 no-underline transition-colors hover:bg-[#F8F8F8]"
+      className={cn(
+        "group/item flex gap-3.5 rounded-lg px-3 py-3 no-underline hover:bg-[#F8F8F8]",
+        isContactUs ? "transition-none" : "transition-colors"
+      )}
     >
-      <span className="flex size-10 shrink-0 items-center justify-center rounded-lg bg-blue-primary/10 text-blue-secondary transition-colors group-hover/item:bg-blue-primary/15">
+      <span
+        className={cn(
+          "flex size-10 shrink-0 items-center justify-center rounded-lg bg-blue-primary/10 text-blue-secondary group-hover/item:bg-blue-primary/15",
+          isContactUs ? "transition-none" : "transition-colors"
+        )}
+      >
         <Icon className="size-5" strokeWidth={1.75} />
       </span>
       <span className="min-w-0 pt-0.5">
@@ -280,7 +299,7 @@ export default function Header() {
           </Link>
 
           <Link
-            href={CONTACT_HREF}
+            href={BOOK_DEMO_HREF}
             className="group hidden h-9 items-center justify-center gap-1.5 rounded-[3rem] bg-yellow-secondary px-4 text-sm leading-none font-normal text-blue-primary no-underline transition-colors hover:bg-yellow-primary active:brightness-95 min-[992px]:inline-flex"
           >
             Book a demo
@@ -376,7 +395,7 @@ export default function Header() {
                 Sign in / Sign up
               </Link>
               <Link
-                href={CONTACT_HREF}
+                href={BOOK_DEMO_HREF}
                 onClick={() => setMobileOpen(false)}
                 className="group inline-flex h-12 items-center justify-center gap-1.5 rounded-[3rem] bg-yellow-secondary px-4 text-base font-normal text-blue-primary no-underline transition-colors hover:bg-yellow-primary active:brightness-95"
               >

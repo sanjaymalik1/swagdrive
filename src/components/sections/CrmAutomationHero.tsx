@@ -32,7 +32,7 @@ export default function CrmAutomationHero() {
 
               <div className="mt-6 flex flex-wrap items-center justify-center gap-4 min-[1025px]:justify-start">
                 <Link
-                  href="/contact"
+                  href="/book-a-demo"
                   className="group inline-flex items-center gap-2 rounded-[3rem] bg-blue-primary px-5 py-3.5 text-center text-base leading-none font-normal text-yellow-secondary no-underline"
                 >
                   Book a demo

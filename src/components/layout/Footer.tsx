@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { CONTACT_HREF, NAV_LINKS, SIGN_IN_HREF } from "./nav";
+import { BOOK_DEMO_HREF, CONTACT_HREF, NAV_LINKS, SIGN_IN_HREF } from "./nav";
 
 type FooterLink = { label: string; href: string };
 
@@ -22,7 +22,7 @@ const FOOTER_NAV: FooterGroup[] = [
     label: "OTHER",
     href: CONTACT_HREF,
     links: [
-      { label: "Book a demo", href: CONTACT_HREF },
+      { label: "Book a demo", href: BOOK_DEMO_HREF },
       { label: "Sign in / Sign up", href: SIGN_IN_HREF },
     ],
   },

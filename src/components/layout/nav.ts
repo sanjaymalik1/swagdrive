@@ -86,8 +86,29 @@ export const NAV_LINKS: readonly NavLink[] = [
       },
     ],
   },
-  { label: "Company", href: "/#company" },
+  {
+    label: "Company",
+    href: "/#company",
+    children: [
+      {
+        label: "About us",
+        href: "/about",
+        description: "Who we are and how we power global gifting and swag.",
+      },
+      {
+        label: "Sustainability",
+        href: "/sustainability",
+        description: "Our approach to responsible swag and gifting.",
+      },
+      {
+        label: "Contact us",
+        href: "/contact",
+        description: "Talk to our team or book a demo.",
+      },
+    ],
+  },
 ] as const;
 
 export const CONTACT_HREF = "/contact";
+export const BOOK_DEMO_HREF = "/book-a-demo";
 export const SIGN_IN_HREF = "/login";

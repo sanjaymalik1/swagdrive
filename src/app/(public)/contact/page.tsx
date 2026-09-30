@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import ContactBookDemoSection from "@/components/sections/ContactBookDemoSection";
 
 export const metadata: Metadata = {
-  title: "Book a Demo",
+  title: "Contact Us",
   description:
-    "Book a SwagDrive demo and learn how to scale recognition, gifting, and swag globally.",
+    "Have something on your mind? Drop the SwagDrive team a line and we'll get back to you as soon as we can.",
 };
 
 export default function ContactPage() {

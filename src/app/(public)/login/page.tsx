@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import SignInForm from "@/components/auth/SignInForm";
 import { Logo } from "@/components/layout/Logo";
-import { CONTACT_HREF } from "@/components/layout/nav";
+import { BOOK_DEMO_HREF } from "@/components/layout/nav";
 
 export const metadata: Metadata = {
   title: "Sign in",
@@ -16,7 +16,7 @@ export default function LoginPage() {
         <div className="mx-auto flex h-14 w-full max-w-[90rem] items-center justify-between px-5 min-[480px]:px-10 min-[992px]:h-16 min-[992px]:px-12">
           <Logo />
           <Link
-            href={CONTACT_HREF}
+            href={BOOK_DEMO_HREF}
             className="inline-flex h-9 items-center justify-center rounded-[3rem] bg-yellow-primary px-4 text-sm leading-none font-normal text-blue-primary no-underline transition-colors hover:bg-yellow-secondary active:brightness-95"
           >
             Book a demo
