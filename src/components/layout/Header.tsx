@@ -214,7 +214,6 @@ export default function Header() {
   const [desktopDropdownOpen, setDesktopDropdownOpen] = useState(false);
   const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
   const [hidden, setHidden] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     let lastY = window.scrollY;
@@ -224,8 +223,6 @@ export default function Header() {
       const y = window.scrollY;
       const atTop = y < 16;
       const delta = y - lastY;
-
-      setScrolled(!atTop);
 
       if (mobileOpen || desktopDropdownOpen) {
         setHidden(false);
@@ -262,16 +259,11 @@ export default function Header() {
     };
   }, [mobileOpen]);
 
-  const solid = scrolled || mobileOpen;
-
   return (
     <header
       className={cn(
-        "fixed inset-x-0 top-0 z-50 w-full font-[family-name:var(--font-lexend)] transition-[transform,background-color,box-shadow] duration-300 ease-out",
-        hidden && !mobileOpen ? "-translate-y-full" : "translate-y-0",
-        solid
-          ? "bg-white shadow-[0_1px_0_rgba(34,30,38,0.06)]"
-          : "bg-transparent shadow-none"
+        "fixed inset-x-0 top-0 z-50 w-full bg-white font-[family-name:var(--font-lexend)] shadow-[0_1px_0_rgba(34,30,38,0.06)] transition-transform duration-300 ease-out",
+        hidden && !mobileOpen ? "-translate-y-full" : "translate-y-0"
       )}
     >
       <div className="mx-auto grid h-14 w-full max-w-[90rem] grid-cols-[1fr_auto] items-center gap-x-4 px-5 min-[480px]:px-10 min-[992px]:h-16 min-[992px]:grid-cols-[auto_1fr_auto] min-[992px]:gap-x-8 min-[992px]:px-12">

@@ -17,10 +17,10 @@ export function Logo({ className }: LogoProps) {
     >
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
-        src="/swagdrive-logo.png"
+        src="/swagdrive-logo.png?v=5"
         alt="SwagDrive"
-        width={924}
-        height={172}
+        width={1446}
+        height={273}
         className="block h-5 w-auto max-w-[140px] object-contain object-left min-[992px]:h-[22px] min-[992px]:max-w-[160px]"
       />
     </Link>

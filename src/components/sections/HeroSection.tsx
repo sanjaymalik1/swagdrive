@@ -41,7 +41,7 @@ export default function HeroSection() {
         <div className="w-full">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/hero/hero-collage.jpg"
+            src="/hero/hero-collage.png"
             alt="SwagDrive marketplace, insights, inventory, and branded swag"
             className="h-auto w-full object-contain"
           />

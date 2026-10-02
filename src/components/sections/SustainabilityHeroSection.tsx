@@ -40,30 +40,12 @@ export default function SustainabilityHeroSection() {
           </div>
         </div>
 
-        <div className="relative mx-auto aspect-square w-full max-w-[28rem]">
+        <div className="mx-auto w-full max-w-[28rem]">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/landing-carousel/swagupcarousal1.png"
-            alt="Sustainably sourced swag"
-            className="absolute top-0 left-0 z-[1] size-[58%] rounded-full border-4 border-surface object-cover"
-          />
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/landing-carousel/swagupcarousal8.png"
-            alt="Natural-material gifting"
-            className="absolute top-0 right-0 z-[1] size-[58%] rounded-full border-4 border-surface object-cover"
-          />
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/landing-carousel/swagupcarousal3.png"
-            alt="Reusable, everyday swag"
-            className="absolute bottom-0 left-0 z-[2] size-[58%] rounded-full border-4 border-surface object-cover"
-          />
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/landing-carousel/swagupcarousal4.png"
-            alt="Eco-friendly gifting"
-            className="absolute right-0 bottom-0 z-[2] size-[58%] rounded-full border-4 border-surface object-cover"
+            src="/sustainability/commitment.avif"
+            alt="Team members relaxing on a terrace with sustainable swag"
+            className="block aspect-square w-full object-contain"
           />
         </div>
       </div>

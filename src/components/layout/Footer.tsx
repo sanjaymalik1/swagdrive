@@ -45,10 +45,10 @@ export default function Footer() {
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/swagdrive-logo-footer.png?v=4"
+                src="/swagdrive-logo-footer.png?v=5"
                 alt="SwagDrive"
-                width={924}
-                height={172}
+                width={1446}
+                height={273}
                 className="mb-2.5 block h-auto max-h-[40px] w-auto max-w-[170px] object-contain object-left min-[768px]:max-h-[44px] min-[768px]:max-w-[186px] min-[1280px]:max-h-[46px] min-[1280px]:max-w-[196px]"
               />
             </Link>

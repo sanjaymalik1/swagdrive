@@ -1,5 +1,5 @@
 const QUOTE =
-  "“We cut 9 vendors, saved a ton of money, and took your engagement to an all-new level.”";
+  "“We cut 9 vendors, save you a ton of money, and take your engagement to an all-new level.”";
 
 export default function QuoteSection() {
   return (

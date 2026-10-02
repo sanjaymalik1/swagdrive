@@ -12,8 +12,8 @@ export default function ContactBookDemoSection() {
       }}
     >
       <div className="mx-auto grid min-h-[calc(100vh-4.5rem)] w-full max-w-7xl grid-cols-1 items-center gap-10 px-5 py-16 min-[480px]:px-10 min-[768px]:py-24 min-[992px]:grid-cols-2 min-[992px]:gap-14">
-        <div>
-          <h1 className="m-0 text-[2.5rem] leading-[1.05] font-normal tracking-[-0.06rem] text-white min-[768px]:text-[3.5rem] min-[768px]:tracking-[-0.12rem] min-[992px]:text-[4rem] min-[992px]:tracking-[-0.14rem]">
+        <div className="min-[992px]:-translate-x-12 min-[992px]:-translate-y-20">
+          <h1 className="m-0 text-[2.5rem] leading-[1.05] font-normal tracking-[-0.06rem] text-yellow-secondary min-[768px]:text-[3.5rem] min-[768px]:tracking-[-0.12rem] min-[992px]:text-[4rem] min-[992px]:tracking-[-0.14rem]">
             Contact Us
           </h1>
           <p className="mt-5 max-w-[28rem] font-[family-name:var(--font-overpass)] text-base leading-[1.5] font-light text-white/80 min-[768px]:mt-6 min-[768px]:text-[1.125rem]">

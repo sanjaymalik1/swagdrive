@@ -1,11 +1,11 @@
 const GALLERY_IMAGES = [
-  { src: "/landing-carousel/swagupcarousal1.png", tall: true },
-  { src: "/landing-carousel/swagupcarousal3.png", tall: true },
-  { src: "/landing-carousel/swagupcarousal4.png", tall: false },
-  { src: "/landing-carousel/swagupcarousal8.png", tall: false },
-  { src: "/landing-carousel/swagupcarousal2.png", tall: true },
-  { src: "/landing-carousel/swagupcarousal6.png", tall: true },
-  { src: "/landing-carousel/swagupcarousal7.png", tall: true },
+  { src: "/sustainability/gift-1.webp", ratio: "16 / 9" },
+  { src: "/sustainability/gift-2.avif", ratio: "1102 / 1114" },
+  { src: "/sustainability/gift-3.webp", ratio: "2560 / 1804" },
+  { src: "/sustainability/gift-4.avif", ratio: "1 / 1" },
+  { src: "/sustainability/gift-5.webp", ratio: "1 / 1" },
+  { src: "/sustainability/gift-6.avif", ratio: "990 / 998" },
+  { src: "/sustainability/gift-7.webp", ratio: "1 / 1" },
 ] as const;
 
 export default function SustainabilityCtaSection() {
@@ -33,7 +33,8 @@ export default function SustainabilityCtaSection() {
               <img
                 src={item.src}
                 alt="Sustainable swag and gifting"
-                className={`w-full object-cover ${item.tall ? "aspect-square" : "aspect-[16/10]"}`}
+                className="block w-full object-cover"
+                style={{ aspectRatio: item.ratio }}
               />
             </div>
           ))}

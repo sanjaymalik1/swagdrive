@@ -3,7 +3,6 @@ import SustainabilityHeroSection from "@/components/sections/SustainabilityHeroS
 import SustainabilityCommitmentSection from "@/components/sections/SustainabilityCommitmentSection";
 import SustainabilityInitiativesSection from "@/components/sections/SustainabilityInitiativesSection";
 import SustainabilityGoalsSection from "@/components/sections/SustainabilityGoalsSection";
-import SustainabilityQuoteSection from "@/components/sections/SustainabilityQuoteSection";
 import SustainabilityCtaSection from "@/components/sections/SustainabilityCtaSection";
 
 export const metadata: Metadata = {
@@ -19,7 +18,6 @@ export default function SustainabilityPage() {
       <SustainabilityCommitmentSection />
       <SustainabilityInitiativesSection />
       <SustainabilityGoalsSection />
-      <SustainabilityQuoteSection />
       <SustainabilityCtaSection />
     </>
   );

@@ -39,21 +39,6 @@ export const NAV_LINKS: readonly NavLink[] = [
     columns: 2,
     children: [
       {
-        label: "Global Warehousing",
-        href: "/capabilities/global-warehousing",
-        description: "Store and ship swag worldwide from secure global hubs.",
-      },
-      {
-        label: "Events Fulfillment",
-        href: "/capabilities/events-fulfillment",
-        description: "Deliver swag to and from any event, on time and on brand.",
-      },
-      {
-        label: "Sourcing & Manufacturing",
-        href: "/capabilities/sourcing-manufacturing",
-        description: "Source premium products and manufacture custom swag at scale.",
-      },
-      {
         label: "Swag Management",
         href: "/capabilities/swag-management",
         description: "Create, track, and send custom swag from one dashboard.",
@@ -64,9 +49,24 @@ export const NAV_LINKS: readonly NavLink[] = [
         description: "Celebrate milestones and motivate teams with thoughtful gifts.",
       },
       {
+        label: "Events Fulfillment",
+        href: "/capabilities/events-fulfillment",
+        description: "Deliver swag to and from any event, on time and on brand.",
+      },
+      {
         label: "Personalized Gifting",
         href: "/capabilities/personalized-gifting",
         description: "Send hyper-personalized gifts that stand out and convert.",
+      },
+      {
+        label: "Global Warehousing",
+        href: "/capabilities/global-warehousing",
+        description: "Store and ship swag worldwide from secure global hubs.",
+      },
+      {
+        label: "Sourcing & Manufacturing",
+        href: "/capabilities/sourcing-manufacturing",
+        description: "Source premium products and manufacture custom swag at scale.",
       },
     ],
   },
