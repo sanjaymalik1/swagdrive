@@ -21,7 +21,7 @@ export function Logo({ className }: LogoProps) {
         alt="SwagDrive"
         width={1446}
         height={273}
-        className="block h-5 w-auto max-w-[140px] object-contain object-left min-[992px]:h-[22px] min-[992px]:max-w-[160px]"
+        className="block h-7 w-auto max-w-[160px] object-contain object-left min-[992px]:h-[34px] min-[992px]:max-w-[190px]"
       />
     </Link>
   );

@@ -10,7 +10,7 @@ const BLOB_BOTTOM_LEFT =
 export default function BookDemoSection() {
   return (
     <section className="font-[family-name:var(--font-overpass)]">
-      <div className="grid min-h-[calc(100vh-4.5rem)] grid-cols-1 min-[992px]:grid-cols-2">
+      <div className="grid min-h-[100dvh] grid-cols-1 min-[992px]:grid-cols-2">
         <div className="relative flex flex-col justify-center overflow-hidden bg-yellow-tertiary px-5 py-16 min-[480px]:px-10 min-[992px]:px-12 min-[992px]:py-24">
           {/* Subtle corner decorations — same paths/orientation, smaller size only */}
           <svg

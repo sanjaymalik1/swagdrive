@@ -46,12 +46,18 @@ export default function CreativeServicesHeroSection() {
               </Link>
             </div>
 
-            <div className="w-full overflow-hidden rounded-2xl min-[992px]:rounded-[1rem]">
+            <div className="relative mx-auto aspect-[1/1.1] w-full max-w-[36rem]">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/design-studio/creative-services/hero.avif"
-                alt="Creative services for corporate gifting"
-                className="block h-auto w-full object-contain"
+                src="/design-studio/creative-services/hero-1.webp"
+                alt="Branded blanket gifting"
+                className="absolute top-0 right-0 block h-auto w-[70%] rounded-[1.25rem] object-cover shadow-xl"
+              />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/design-studio/creative-services/hero-2.webp"
+                alt="Warehouse inventory dashboard"
+                className="absolute bottom-[10%] left-0 block h-auto w-[74%] object-contain drop-shadow-2xl"
               />
             </div>
           </div>

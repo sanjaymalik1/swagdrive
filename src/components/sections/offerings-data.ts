@@ -48,7 +48,7 @@ export const OFFERING_TABS: OfferingTab[] = [
       "Recognition & Incentives",
       "Fundraising",
     ],
-    heroImage: `${MEDIA}/Shop-Image.png`,
+    heroImage: "/platform/swag-store/hero.png",
     scrollColor: "#0B7AFC",
   },
   {

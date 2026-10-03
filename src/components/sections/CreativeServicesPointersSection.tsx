@@ -7,7 +7,7 @@ const POINTERS = [
     title: "Open doors with expertly curated gift campaigns",
     description:
       "Standard gifts often miss the mark. Juggling personalization, logistics, and timing can be overwhelming. Our dedicated Creative Services team simplifies this by collaborating with you to create tailored gift bundles that align with your marketing and sales goals, and resonate with your audience. With thoughtful, on-brand items, we help you leave lasting impressions and drive real results.",
-    image: "/design-studio/creative-services/pointer-campaigns.avif",
+    image: "/design-studio/creative-services/pointer-campaigns.webp",
     imageAlt: "Curated gift campaign dashboard",
     reverse: false,
   },
@@ -16,7 +16,7 @@ const POINTERS = [
     title: "Increase engagement with unforgettable virtual experiences",
     description:
       "We know virtual events are vital for fostering relationships and driving your brand's success, but they can often feel impersonal and tricky to manage. SwagDrive's Professional Services simplify this by partnering with trusted vendors to create unforgettable VIP experiences—like cocktail classes, workshops, and murder mysteries. With us handling the details, you can ensure every event turns your audience into loyal brand advocates.",
-    image: "/design-studio/creative-services/pointer-virtual.avif",
+    image: "/design-studio/creative-services/pointer-virtual.webp",
     imageAlt: "Virtual event experiences and collections",
     reverse: true,
   },
@@ -25,7 +25,7 @@ const POINTERS = [
     title: "Turn recipients into brand champions with custom swag",
     description:
       "Bring your brand to life with our intuitive self-serve Merchandise Builder. Easily design, order, and restock high-quality custom swag that embodies your brand—whether it's apparel, stationery, tech gadgets, or more. Choose to ship directly to your office, event, clients and prospects, or store items in our warehouse for easy distribution. Sit back and relax as we ensure seamless delivery, helping you make lasting impressions.",
-    image: "/design-studio/creative-services/pointer-merch.avif",
+    image: "/design-studio/creative-services/pointer-merch.webp",
     imageAlt: "Merchandise builder customization tools",
     reverse: false,
   },
@@ -35,7 +35,7 @@ const POINTERS = [
       "Increase merchandise sales and streamline fulfillment with Store Portals",
     description:
       "We get it—managing branded corporate swag and merchandise at scale can feel overwhelming. That's where our Store Portals come in—providing a white-labelled eCommerce solution tailored to your needs. Effortlessly manage sales and inventory while we handle logistics and distribution. This empowers you to concentrate on creating impactful campaigns and driving engagement—without the hassle of fulfillment.",
-    image: "/design-studio/creative-services/pointer-store.avif",
+    image: "/design-studio/creative-services/pointer-store.webp",
     imageAlt: "White-labeled store portal and product catalog",
     reverse: true,
     cta: {
@@ -48,7 +48,7 @@ const POINTERS = [
     title: "Convert with branded gifting landing pages",
     description:
       "SwagDrive's Professional Services can help you create high-converting tailored landing pages designed to captivate your audience. With personalized messaging, custom coded scripts and interactive elements, our pages enhance engagement, ensure you capture all those important details, and maximize your campaign ROI.",
-    image: "/design-studio/creative-services/pointer-landing.avif",
+    image: "/design-studio/creative-services/pointer-landing.webp",
     imageAlt: "Branded gifting landing pages dashboard",
     reverse: false,
     cta: {
@@ -62,7 +62,7 @@ const POINTERS = [
       "Eliminate logistics and event headaches with global distribution",
     description:
       "Coordinating gifting campaigns internationally can lead to a host of headaches, like shipping delays and customs issues. With SwagDrive's global distribution and event capabilities, we streamline the process, ensuring your gifts arrive on time, at the right location, and meet local standards. Scale your gifting efforts confidently, knowing we've got global and event logistics covered.",
-    image: "/design-studio/creative-services/pointer-global.avif",
+    image: "/design-studio/creative-services/pointer-global.webp",
     imageAlt: "Global marketplace and distribution",
     reverse: true,
   },
@@ -71,7 +71,7 @@ const POINTERS = [
     title: "Achieve measurable ROI with every gift",
     description:
       "Understanding the effectiveness of your gifting campaigns is key to future success. Our platform offers detailed tracking and reporting metrics to measure gift engagement and ROI, integrating in a couple of clicks with your CRM tech stack for enhanced visibility. With our data-driven insights, we help you optimize strategies for lead nurturing and deal acceleration—ensuring stronger results.",
-    image: "/design-studio/creative-services/pointer-roi.avif",
+    image: "/design-studio/creative-services/pointer-roi.webp",
     imageAlt: "Gifting ROI insights and reporting",
     reverse: false,
     cta: {
