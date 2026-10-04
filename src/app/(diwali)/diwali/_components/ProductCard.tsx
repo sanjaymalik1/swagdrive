@@ -55,19 +55,19 @@ export function ProductCard({ product }: { product: DiwaliProduct }) {
           aria-modal="true"
           aria-label={product.name}
           onClick={() => setIsOpen(false)}
-          className="fixed inset-0 z-50 flex cursor-zoom-out items-center justify-center bg-[#1c0516]/90 p-6"
+          className="fixed inset-0 z-50 flex cursor-zoom-out items-center justify-center bg-[#1c0516]/90 p-3 sm:p-6"
         >
           <button
             type="button"
             onClick={() => setIsOpen(false)}
             aria-label="Close"
-            className="absolute right-5 top-5 flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white/20"
+            className="absolute right-3 top-3 z-10 flex h-10 w-10 sm:right-5 sm:top-5 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white/20"
           >
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <path d="M18 6 6 18M6 6l12 12" />
             </svg>
           </button>
-          <div className="relative h-[85vh] w-full max-w-3xl">
+          <div className="relative h-[80vh] h-[80dvh] w-full max-w-3xl sm:h-[85dvh]">
             <Image
               src={product.image}
               alt={product.name}
