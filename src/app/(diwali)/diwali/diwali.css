@@ -1,0 +1,38 @@
+/* Diwali catalogue theme — scoped to .theme-diwali so it never leaks into the main site */
+.theme-diwali {
+  --background: #fbf3e3;
+  --foreground: #3b2a20;
+
+  --card: #fffefa;
+  --card-foreground: #3b2a20;
+
+  --primary: #c9a227;
+  --primary-foreground: #fbf3e3;
+
+  --secondary: #8b2e2e;
+  --secondary-foreground: #fbf3e3;
+
+  --accent: #c9742f;
+  --accent-foreground: #3b2a20;
+
+  --muted: #f5ead3;
+  --muted-foreground: #8a7a68;
+
+  --border: color-mix(in srgb, #c9a227 30%, transparent);
+  --input: color-mix(in srgb, #c9a227 20%, transparent);
+  --ring: #c9a227;
+
+  --radius: 1rem;
+
+  background: var(--background);
+  color: var(--foreground);
+}
+
+.diwali-gold-divider {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    color-mix(in srgb, #c9a227 70%, transparent),
+    transparent
+  );
+}

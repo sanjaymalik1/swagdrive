@@ -43,6 +43,9 @@ next-env.d.ts
 /src/generated/prisma
 /docs
 
+# raw source photography (not web assets — see public/diwali for the optimized copies used by the app)
+/twigstory-images
+
 AGENTS.md
 CLAUDE.md
 

@@ -5,7 +5,7 @@ import { SiteHeader } from "@/components/layout/SiteHeader";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { ContactCircularReveal } from "@/components/transitions/ContactCircularReveal";
 import { SITE_CONFIG } from "@/lib/constants";
-import "./globals.css";
+import "../globals.css";
 
 const inter = Inter({
   subsets: ["latin"],
