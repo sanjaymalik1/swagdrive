@@ -1,38 +1,180 @@
-/* Diwali catalogue theme — scoped to .theme-diwali so it never leaks into the main site */
+/* Diwali catalogue theme — scoped to .theme-diwali so it never leaks into the main site.
+   Palette: deep plum/wine night, warm ivory type, antique-gold accents, amber used sparingly. */
 .theme-diwali {
-  --background: #fbf3e3;
-  --foreground: #3b2a20;
+  --background: #3a0b30;
+  --foreground: #f7ebd5;
 
-  --card: #fffefa;
-  --card-foreground: #3b2a20;
+  --card: #f7ebd5;
+  --card-foreground: #3a0b30;
 
-  --primary: #c9a227;
-  --primary-foreground: #fbf3e3;
+  --primary: #e0b44f;
+  --primary-foreground: #2a0823;
 
-  --secondary: #8b2e2e;
-  --secondary-foreground: #fbf3e3;
+  --secondary: #dcc69a;
+  --secondary-foreground: #2a0823;
 
-  --accent: #c9742f;
-  --accent-foreground: #3b2a20;
+  --accent: #c99a2e;
+  --accent-foreground: #2a0823;
 
-  --muted: #f5ead3;
-  --muted-foreground: #8a7a68;
+  --muted: #4a1039;
+  --muted-foreground: #cbb8bf;
 
-  --border: color-mix(in srgb, #c9a227 30%, transparent);
-  --input: color-mix(in srgb, #c9a227 20%, transparent);
-  --ring: #c9a227;
+  --border: color-mix(in srgb, #c99a2e 30%, transparent);
+  --input: color-mix(in srgb, #c99a2e 22%, transparent);
+  --ring: #e0b44f;
 
-  --radius: 1rem;
+  --radius: 0.625rem;
 
   background: var(--background);
   color: var(--foreground);
 }
 
+/* ---------- Hero: atmospheric plum with warm halo + faint jaali lattice ---------- */
+.diwali-hero {
+  position: relative;
+  isolation: isolate;
+  background:
+    radial-gradient(ellipse 80% 55% at 50% 0%, rgba(125, 45, 105, 0.5), transparent 75%),
+    linear-gradient(180deg, #4d123b 0%, #3f0d33 65%, #340a2b 100%);
+}
+.diwali-hero::before {
+  /* eight-point-star lattice, very faint, fading out from the top centre */
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='72' height='72' viewBox='0 0 72 72' fill='none' stroke='%23e0b44f' stroke-width='1'%3E%3Cpath d='M36 6 L46 26 L66 36 L46 46 L36 66 L26 46 L6 36 L26 26Z'/%3E%3Cpath d='M0 0 L12 12 M72 0 L60 12 M0 72 L12 60 M72 72 L60 60'/%3E%3C/svg%3E");
+  opacity: 0.035;
+  -webkit-mask-image: radial-gradient(ellipse 70% 80% at 50% 25%, #000 20%, transparent 75%);
+  mask-image: radial-gradient(ellipse 70% 80% at 50% 25%, #000 20%, transparent 75%);
+}
+/* candlelight bloom behind the headline: wide, soft, barely-there breathing */
+.diwali-bloom {
+  background: radial-gradient(
+    closest-side,
+    rgba(240, 178, 80, 0.13),
+    rgba(224, 150, 70, 0.05) 55%,
+    transparent 100%
+  );
+  filter: blur(30px);
+  animation: diwali-breathe 9s ease-in-out infinite;
+}
+@keyframes diwali-breathe {
+  0%, 100% { opacity: 0.8; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.04); }
+}
+
+/* soft melt into the catalogue tone */
+.diwali-hero::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 7rem;
+  z-index: -1;
+  pointer-events: none;
+  background: linear-gradient(180deg, transparent, #340a2b);
+}
+
+/* ---------- Section tones ---------- */
+.diwali-catalogue {
+  background: linear-gradient(180deg, #340a2b 0%, #2e0927 100%);
+}
+.diwali-footer {
+  position: relative;
+  background: #1a0415;
+}
+.diwali-footer::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(201, 154, 46, 0.45), transparent);
+}
+
+/* ---------- Details ---------- */
 .diwali-gold-divider {
   background: linear-gradient(
     90deg,
     transparent,
-    color-mix(in srgb, #c9a227 70%, transparent),
+    color-mix(in srgb, #e0b44f 75%, transparent),
     transparent
   );
+}
+
+.diwali-flame {
+  filter: drop-shadow(0 0 5px rgba(255, 200, 87, 0.8));
+  animation: diwali-flicker 2.8s ease-in-out infinite;
+  transform-origin: 50% 100%;
+}
+@keyframes diwali-flicker {
+  0%, 100% { opacity: 1; transform: scaleY(1); }
+  50% { opacity: 0.82; transform: scaleY(0.93); }
+}
+
+.diwali-mote {
+  opacity: 0;
+  box-shadow: 0 0 8px 2px rgba(243, 201, 105, 0.55);
+  animation: diwali-drift 9s ease-in-out infinite;
+}
+@keyframes diwali-drift {
+  0% { opacity: 0; transform: translateY(8px); }
+  30%, 70% { opacity: 0.7; }
+  100% { opacity: 0; transform: translateY(-26px); }
+}
+
+/* ---------- Catalogue card: mounted print on warm card stock ---------- */
+.diwali-card {
+  background: linear-gradient(180deg, #f9f0de 0%, #f1e4ca 100%);
+  border: 1px solid rgba(168, 126, 40, 0.5);
+  border-radius: 6px;
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.55),
+    0 1px 2px rgba(0, 0, 0, 0.35),
+    0 16px 26px -16px rgba(8, 0, 6, 0.7);
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.35s ease, box-shadow 0.35s ease;
+}
+.diwali-card:hover,
+.diwali-card:focus-within {
+  transform: translateY(-2px);
+  border-color: #d3a83f;
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.55),
+    0 1px 2px rgba(0, 0, 0, 0.35),
+    0 22px 32px -18px rgba(8, 0, 6, 0.75),
+    0 0 0 1px rgba(224, 180, 79, 0.25);
+}
+.diwali-sweep {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(to top, rgba(42, 8, 35, 0.5), transparent 45%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.diwali-card:hover .diwali-sweep,
+.diwali-card:focus-within .diwali-sweep {
+  opacity: 1;
+}
+.diwali-view {
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.diwali-card:hover .diwali-view,
+.diwali-card:focus-within .diwali-view {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .diwali-flame,
+  .diwali-bloom,
+  .diwali-mote { animation: none; }
+  .diwali-mote { opacity: 0.35; }
+  .diwali-card,
+  .diwali-card:hover,
+  .diwali-card:focus-within { transition: none; transform: none; }
+  .diwali-sweep, .diwali-view { transition: none; }
 }
