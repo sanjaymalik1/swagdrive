@@ -178,3 +178,21 @@
   .diwali-card:focus-within { transition: none; transform: none; }
   .diwali-sweep, .diwali-view { transition: none; }
 }
+
+/* ---------- Responsive refinements ---------- */
+.theme-diwali { overflow-x: clip; }
+
+/* tighter card chrome on small phones so two columns stay comfortable */
+@media (max-width: 399px) {
+  .diwali-card { padding: 0.375rem; }
+}
+
+/* touch devices have no hover: keep the cards still and the "view larger" hint hidden */
+@media (hover: none) {
+  .diwali-card:hover { transform: none; }
+}
+
+/* short landscape phones: trim hero bottom space */
+@media (max-height: 480px) and (orientation: landscape) {
+  .diwali-hero { padding-bottom: 5rem; }
+}
