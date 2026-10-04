@@ -5,9 +5,9 @@ const LINK =
 
 export function DiwaliFooter() {
   return (
-    <footer className="diwali-footer px-6 pb-8 pt-12 sm:pt-14">
+    <footer className="diwali-footer px-5 pb-[max(2rem,env(safe-area-inset-bottom))] pt-12 sm:px-6 sm:pt-14">
       <div className="mx-auto flex max-w-md flex-col items-center text-center">
-        <p className="font-(family-name:--font-diwali-heading) text-3xl font-semibold uppercase tracking-[0.16em] text-[#f7ebd5]">
+        <p className="font-(family-name:--font-diwali-heading) text-2xl font-semibold uppercase tracking-[0.16em] sm:text-3xl text-[#f7ebd5]">
           {SITE_CONFIG.name}
         </p>
         <p className="mt-2 font-(family-name:--font-diwali-heading) text-lg italic text-[#dcc69a]">
@@ -15,8 +15,8 @@ export function DiwaliFooter() {
         </p>
 
         <p className="mt-8 text-sm text-[#f7ebd5]/60">Questions about bulk orders?</p>
-        <p className="mt-2 flex items-center justify-center gap-4 text-sm">
-          <a href={`mailto:${SITE_CONFIG.email}`} className={LINK}>
+        <p className="mt-2 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-sm">
+          <a href={`mailto:${SITE_CONFIG.email}`} className={`${LINK} break-all`}>
             {SITE_CONFIG.email}
           </a>
           <span aria-hidden="true" className="h-3.5 w-px bg-[#c99a2e]/50" />

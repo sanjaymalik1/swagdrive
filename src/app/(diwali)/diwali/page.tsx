@@ -7,7 +7,7 @@ import { DIWALI_PRODUCTS } from "./_data";
 
 // Shared primary-CTA style so every main button is a visual sibling.
 const CTA_CLASS =
-  "inline-flex h-12 items-center justify-center rounded-lg bg-primary px-8 text-sm font-semibold tracking-wide text-primary-foreground shadow-[0_10px_26px_-12px_rgba(224,180,79,0.7)] transition duration-300 hover:-translate-y-px hover:brightness-105 hover:shadow-[0_14px_30px_-12px_rgba(224,180,79,0.8)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary motion-reduce:transition-none motion-reduce:hover:translate-y-0";
+  "inline-flex h-12 w-full max-w-xs items-center justify-center rounded-lg bg-primary px-8 sm:w-auto text-sm font-semibold tracking-wide text-primary-foreground shadow-[0_10px_26px_-12px_rgba(224,180,79,0.7)] transition duration-300 hover:-translate-y-px hover:brightness-105 hover:shadow-[0_14px_30px_-12px_rgba(224,180,79,0.8)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary motion-reduce:transition-none motion-reduce:hover:translate-y-0";
 
 export default function DiwaliCataloguePage() {
   return (
@@ -26,7 +26,7 @@ export default function DiwaliCataloguePage() {
           <div aria-hidden="true" className="mx-auto h-px max-w-4xl diwali-gold-divider opacity-50" />
           <DiyaGarland />
 
-          <div className="relative z-10 mx-auto max-w-5xl px-6 pt-2 text-center sm:pt-4">
+          <div className="relative z-10 mx-auto max-w-5xl px-5 pt-2 text-center sm:px-6 sm:pt-4">
             <p className="text-xs font-medium uppercase tracking-[0.28em] text-primary sm:text-[13px]">
               SwagDrive Presents
             </p>
@@ -52,14 +52,14 @@ export default function DiwaliCataloguePage() {
 
         {/* Collection */}
         <section id="collection" className="diwali-catalogue scroll-mt-4">
-          <div className="mx-auto max-w-6xl px-5 pb-10 pt-12 sm:px-6 sm:pb-12 sm:pt-16">
+          <div className="mx-auto max-w-6xl 2xl:max-w-7xl px-4 min-[400px]:px-5 pb-10 pt-12 sm:px-6 sm:pb-12 sm:pt-16">
             <header className="text-center">
               <p className="flex items-center justify-center gap-4 text-xs font-medium uppercase tracking-[0.28em] text-primary/90">
                 <span aria-hidden="true" className="h-px w-8 bg-primary/40" />
                 The Collection
                 <span aria-hidden="true" className="h-px w-8 bg-primary/40" />
               </p>
-              <h2 className="mt-5 font-(family-name:--font-diwali-heading) text-4xl font-medium tracking-tight text-[#f7ebd5] sm:text-5xl">
+              <h2 className="mt-5 font-(family-name:--font-diwali-heading) text-[2rem] min-[400px]:text-4xl font-medium tracking-tight text-[#f7ebd5] sm:text-5xl">
                 Our Festive Collection
               </h2>
               <p className="mx-auto mt-3 max-w-md text-sm leading-relaxed text-[#cbb8bf]">
