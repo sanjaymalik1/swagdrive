@@ -5,6 +5,7 @@ import QuoteSection from "@/components/sections/QuoteSection";
 import ConsolidateSection from "@/components/sections/ConsolidateSection";
 import TeamsSection from "@/components/sections/TeamsSection";
 import UseCasesSection from "@/components/sections/UseCasesSection";
+import { DiwaliCampaignBanner } from "@/components/promo/DiwaliCampaignBanner";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <ConsolidateSection />
       <TeamsSection />
       <UseCasesSection />
+      <DiwaliCampaignBanner />
     </>
   );
 }

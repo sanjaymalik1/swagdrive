@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Inter } from "next/font/google";
+import { DiwaliAnnouncementBar } from "@/components/promo/DiwaliAnnouncementBar";
 import "../../globals.css";
 import "./diwali.css";
 
@@ -34,6 +35,7 @@ export default function DiwaliLayout({
       className={`${cormorant.variable} ${inter.variable} theme-diwali h-full antialiased`}
     >
       <body className="flex min-h-full flex-col font-[family-name:var(--font-diwali-body)]">
+        <DiwaliAnnouncementBar placement="inline" />
         {children}
       </body>
     </html>

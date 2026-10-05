@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Lexend, Overpass } from "next/font/google";
 import { Toaster } from "sonner";
 import { SiteHeader } from "@/components/layout/SiteHeader";
+import { DiwaliAnnouncementBar } from "@/components/promo/DiwaliAnnouncementBar";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { ContactCircularReveal } from "@/components/transitions/ContactCircularReveal";
 import { SITE_CONFIG } from "@/lib/constants";
@@ -68,6 +69,7 @@ export default function RootLayout({
       <body className="flex min-h-full flex-col font-sans">
         <ContactCircularReveal>
           <SiteHeader />
+          <DiwaliAnnouncementBar placement="below-fixed-header" />
           <main className="flex-1">{children}</main>
           <SiteFooter />
           <Toaster richColors position="top-right" />

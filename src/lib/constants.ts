@@ -80,8 +80,8 @@ export const USE_CASES: { title: string; description: string }[] = [
 export const SITE_CONFIG = {
   name:            "SwagDrive",
   tagline:         "Premium Corporate Gifting for Indian Businesses",
-  whatsappNumber:  "919999999999",
-  email:           "hello@company.com",
-  phone:           "+91 99999 99999",
+  whatsappNumber:  "919220880764",
+  email:           "hello@swagdrive.com",
+  phone:           "+91 92208 80764",
   city:            "Delhi",
 } as const;

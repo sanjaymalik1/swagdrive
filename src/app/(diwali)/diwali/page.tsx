@@ -26,7 +26,7 @@ export default function DiwaliCataloguePage() {
           <div aria-hidden="true" className="mx-auto h-px max-w-4xl diwali-gold-divider opacity-50" />
           <DiyaGarland />
 
-          <div className="relative z-10 mx-auto max-w-5xl px-5 pt-2 text-center sm:px-6 sm:pt-4">
+          <div className="relative z-10 mx-auto -mt-5 max-w-5xl px-5 pt-2 text-center sm:px-6 sm:pt-4">
             <p className="text-xs font-medium uppercase tracking-[0.28em] text-primary sm:text-[13px]">
               SwagDrive Presents
             </p>
@@ -35,9 +35,15 @@ export default function DiwaliCataloguePage() {
               <span className="block italic text-[#e4c27c]">Gifting Collection</span>
             </h1>
             <p className="mx-auto mt-6 max-w-xl text-balance text-base leading-relaxed text-[#f7ebd5]/80 sm:text-lg">
-              Hand-finished hampers and festive serveware from our Twigstory
-              collection — perfect for employees, clients and partners this
-              Diwali.
+              <span className="block">
+                Timeless Wooden Essentials, Crafted for Meaningful Gifting
+              </span>
+              <span className="mt-4 block">
+                Discover a curated collection of handcrafted wooden homeware,
+                from elegant trays and bowls to versatile storage jars, perfectly
+                suited for thoughtful gifting to employees, clients, and
+                partners.
+              </span>
             </p>
             <p className="mt-5 text-sm tracking-wide text-[#dcc69a]">
               Place bulk orders by Oct 15 for guaranteed festival delivery.
