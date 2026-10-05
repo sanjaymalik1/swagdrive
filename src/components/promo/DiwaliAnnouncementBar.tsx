@@ -44,10 +44,10 @@ export function DiwaliAnnouncementBar({ placement }: Props) {
       aria-label="Diwali 2026 announcement"
       className={`${position} border-b border-[#c99a2e]/30 bg-[linear-gradient(90deg,#3f0d33,#4d123b_50%,#3f0d33)] font-sans`}
     >
-      <div className="mx-auto flex min-h-8 max-w-[90rem] items-center justify-center gap-x-3 px-4 py-1 text-center sm:gap-x-5">
-        <p className="text-[13px] leading-tight text-[#f7ebd5] sm:text-sm">
+      <div className="mx-auto flex min-h-8 max-w-[90rem] items-center justify-center gap-x-3 px-4 py-1 text-center max-[390px]:justify-between max-[390px]:gap-x-2 max-[390px]:px-2.5 sm:gap-x-5">
+        <p className="text-[13px] leading-tight text-[#f7ebd5] max-[390px]:whitespace-nowrap sm:text-sm">
           <span
-            className={`${cormorant.className} text-[15px] font-semibold tracking-wide text-[#e4c27c] sm:text-base`}
+            className={`${cormorant.className} text-[15px] font-semibold tracking-wide text-[#e4c27c] max-[390px]:text-[13px] max-[340px]:text-xs sm:text-base`}
           >
             Diwali 2026 · Gifting Collection
           </span>
@@ -60,7 +60,7 @@ export function DiwaliAnnouncementBar({ placement }: Props) {
         </p>
         <Link
           href="/diwali"
-          className="shrink-0 whitespace-nowrap text-[13px] font-semibold tracking-wide text-[#e0b44f] underline-offset-4 transition-colors hover:text-[#f7ebd5] hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#e0b44f] sm:text-sm"
+          className="shrink-0 whitespace-nowrap text-[13px] font-semibold tracking-wide text-[#e0b44f] max-[390px]:text-xs max-[340px]:text-[11px] underline-offset-4 transition-colors hover:text-[#f7ebd5] hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#e0b44f] sm:text-sm"
         >
           Explore Collection <span aria-hidden="true">→</span>
         </Link>
