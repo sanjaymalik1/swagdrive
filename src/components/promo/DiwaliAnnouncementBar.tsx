@@ -22,6 +22,9 @@ type Props = {
   placement: "below-fixed-header" | "inline";
 };
 
+// Pages where the announcement bar is not shown.
+const HIDDEN_PATHS = ["/about", "/sustainability", "/contact", "/book-a-demo"];
+
 export function DiwaliAnnouncementBar({ placement }: Props) {
   const pathname = usePathname();
 
@@ -29,6 +32,13 @@ export function DiwaliAnnouncementBar({ placement }: Props) {
   if (
     placement === "below-fixed-header" &&
     (pathname.startsWith("/admin") || pathname === "/login")
+  ) {
+    return null;
+  }
+
+  if (
+    placement === "below-fixed-header" &&
+    HIDDEN_PATHS.some((p) => pathname === p || pathname.startsWith(`${p}/`))
   ) {
     return null;
   }
