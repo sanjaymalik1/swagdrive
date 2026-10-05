@@ -151,6 +151,18 @@
   html {
     @apply font-sans;
   }
+  /* Tailwind v4 preflight resets buttons to cursor: default; restore pointer on genuinely interactive elements. */
+  a[href],
+  button:not(:disabled),
+  summary,
+  select:not(:disabled),
+  input:is([type="button"], [type="submit"], [type="reset"], [type="checkbox"], [type="radio"], [type="file"]):not(:disabled),
+  label[for],
+  [role="button"]:not([aria-disabled="true"]),
+  [role="tab"]:not([aria-disabled="true"]),
+  [role="menuitem"]:not([aria-disabled="true"]) {
+    cursor: pointer;
+  }
 }
 
 @keyframes logo-scroll {
