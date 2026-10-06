@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   },
   description: SITE_CONFIG.tagline,
   metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL ?? "https://swagdrive.in"
+    process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.swagdrive.com"
   ),
   openGraph: {
     type: "website",
